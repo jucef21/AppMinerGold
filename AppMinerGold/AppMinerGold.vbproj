@@ -1,0 +1,3287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09229AD0-4A14-4174-AE84-BE8C46049E2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AppMinerGold.My.MyApplication</StartupObject>
+    <RootNamespace>AppMinerGold</RootNamespace>
+    <AssemblyName>AppMinerGold</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\ASUS\source\repos\Publicar CM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>AppMinerGold</ProductName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>jcfc.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>07142FE8E41B5F41964E425DA194347EF60BA323</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>AppMinerGold.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPCtlXWrapperNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPCtlXWrapperNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPDevNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=696774c42ee28c57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=7fe76e7adf19964b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPGuiNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\packages\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4058.19167, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Ayudas\AboutBox1.designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayudas\AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayudas\FrmConfiguracion.Designer.vb">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayudas\FrmConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayudas\FrmDigitoVerifca.Designer.vb">
+      <DependentUpon>FrmDigitoVerifca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayudas\FrmDigitoVerifca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayudas\FrmPartes.designer.vb">
+      <DependentUpon>FrmPartes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayudas\FrmPartes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcial.designer.vb">
+      <DependentUpon>FrmCopiaParcial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcialAct.Designer.vb">
+      <DependentUpon>FrmCopiaParcialAct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcialAct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcialClientes.Designer.vb">
+      <DependentUpon>FrmCopiaParcialClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmCopiaParcialClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmParcial.Designer.vb">
+      <DependentUpon>FrmParcial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\CopiaEntreFechas\FrmParcial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\FrmBackup.designer.vb">
+      <DependentUpon>FrmBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\FrmBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\FrmCajaBackup.designer.vb">
+      <DependentUpon>FrmCajaBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\FrmCajaBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\FrmCajaCorreo.designer.vb">
+      <DependentUpon>FrmCajaCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\FrmCajaCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\FrmCorreo.designer.vb">
+      <DependentUpon>FrmCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\FrmCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Internet\FrmChkInternet.Designer.vb">
+      <DependentUpon>FrmChkInternet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Backup\Internet\FrmChkInternet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmEliminaEgreso.designer.vb">
+      <DependentUpon>FrmEliminaEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmEliminaEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmSeleEliminaEgreso.designer.vb">
+      <DependentUpon>FrmSeleEliminaEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmSeleEliminaEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmImpElimEgre.Designer.vb">
+      <DependentUpon>FrmImpElimEgre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmImpElimEgre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmReimpEgrEliminado.Designer.vb">
+      <DependentUpon>FrmReimpEgrEliminado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmReimpEgrEliminado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmSeleEgreEliminado.Designer.vb">
+      <DependentUpon>FrmSeleEgreEliminado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmSeleEgreEliminado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\FrmBuscaClienteEgreso.designer.vb">
+      <DependentUpon>FrmBuscaClienteEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\FrmBuscaClienteEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\FrmEgresoCajaMenor.designer.vb">
+      <DependentUpon>FrmEgresoCajaMenor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\FrmEgresoCajaMenor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ImprimeEgreso\FrmRptImpEgreso.Designer.vb">
+      <DependentUpon>FrmRptImpEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ImprimeEgreso\FrmRptImpEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmRptEg.Designer.vb">
+      <DependentUpon>FrmRptEg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmRptEg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmSeleEgresos.designer.vb">
+      <DependentUpon>FrmSeleEgresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmSeleEgresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmCajaMenu.designer.vb">
+      <DependentUpon>FrmCajaMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmCajaMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmLoginCaja.designer.vb">
+      <DependentUpon>FrmLoginCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmLoginCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmReeimpMenu.designer.vb">
+      <DependentUpon>FrmReeimpMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\FrmReeimpMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmEliminaIngreso.Designer.vb">
+      <DependentUpon>FrmEliminaIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmEliminaIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmSeleEliminaIngreso.Designer.vb">
+      <DependentUpon>FrmSeleEliminaIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmSeleEliminaIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmImpElimIngre.Designer.vb">
+      <DependentUpon>FrmImpElimIngre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmImpElimIngre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmReimpIngreEliminado.Designer.vb">
+      <DependentUpon>FrmReimpIngreEliminado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmReimpIngreEliminado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmSeleIngreEliminado.Designer.vb">
+      <DependentUpon>FrmSeleIngreEliminado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmSeleIngreEliminado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\FrmBuscaClienteCajaIngresos.designer.vb">
+      <DependentUpon>FrmBuscaClienteCajaIngresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\FrmBuscaClienteCajaIngresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\FrmIngresoCajaMenor.designer.vb">
+      <DependentUpon>FrmIngresoCajaMenor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\FrmIngresoCajaMenor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ImprimeIngreso\FrmRptImpIngreso.Designer.vb">
+      <DependentUpon>FrmRptImpIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ImprimeIngreso\FrmRptImpIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmRptIng.Designer.vb">
+      <DependentUpon>FrmRptIng.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmRptIng.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmSeleIngresos.designer.vb">
+      <DependentUpon>FrmSeleIngresos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmSeleIngresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmReporteFechasTotalCM.designer.vb">
+      <DependentUpon>FrmReporteFechasTotalCM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmReporteFechasTotalCM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalCM.Designer.vb">
+      <DependentUpon>FrmRptTotalCM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalCM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalEGR.Designer.vb">
+      <DependentUpon>FrmRptTotalEGR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalEGR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalING.Designer.vb">
+      <DependentUpon>FrmRptTotalING.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalING.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmSeleccionaReporte.designer.vb">
+      <DependentUpon>FrmSeleccionaReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\CajaInicio\ReporteTotal\FrmSeleccionaReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CajaMenor\FrmCajaMenor.designer.vb">
+      <DependentUpon>FrmCajaMenor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CajaMenor\FrmCajaMenor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteActividad\FrmBuscaEmpCli.designer.vb">
+      <DependentUpon>FrmBuscaEmpCli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteActividad\FrmBuscaEmpCli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteActividad\FrmDetEmpresa.Designer.vb">
+      <DependentUpon>FrmDetEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteActividad\FrmDetEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\CambioNombre\FrmBuscaCambio.designer.vb">
+      <DependentUpon>FrmBuscaCambio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\CambioNombre\FrmBuscaCambio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\CambioNombre\FrmCambioName.designer.vb">
+      <DependentUpon>FrmCambioName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\CambioNombre\FrmCambioName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteActividad\FrmClienteActividad.Designer.vb">
+      <DependentUpon>FrmClienteActividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteActividad\FrmClienteActividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Consulta\ConsultaClientes\EntidadesC\Cliente.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaClientes\EntidadesC\ClienteRepositoryC.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaClientes\EntidadesC\UtilidadesC.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaClientes\FrmFiltroC.designer.vb">
+      <DependentUpon>FrmFiltroC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Consulta\ConsultaClientes\FrmFiltroC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Consulta\ConsultaUsuarios\Entidades\ClienteRepository.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaUsuarios\Entidades\Usuario.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaUsuarios\Entidades\Utilidades.vb" />
+    <Compile Include="Clientes\Consulta\ConsultaUsuarios\FrmFiltro.designer.vb">
+      <DependentUpon>FrmFiltro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Consulta\ConsultaUsuarios\FrmFiltro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Proveedores\FrmFoto.Designer.vb">
+      <DependentUpon>FrmFoto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Proveedores\FrmFoto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Proveedores\FrmProveedores.designer.vb">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Proveedores\FrmProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\VisualizaClientes\FrmBuscaProve.Designer.vb">
+      <DependentUpon>FrmBuscaProve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\VisualizaClientes\FrmBuscaProve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\VisualizaClientes\FrmVerClientes.Designer.vb">
+      <DependentUpon>FrmVerClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\VisualizaClientes\FrmVerClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmBuscaTotalComprado.Designer.vb">
+      <DependentUpon>FrmBuscaTotalComprado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmBuscaTotalComprado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmConsuCompras.Designer.vb">
+      <DependentUpon>FrmConsuCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmConsuCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmTopesCompras.Designer.vb">
+      <DependentUpon>FrmTopesCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmTopesCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmTotalComprado.Designer.vb">
+      <DependentUpon>FrmTotalComprado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ConsultaComprasOro\FrmTotalComprado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\FrmBuscaEliminaCompras.Designer.vb">
+      <DependentUpon>FrmBuscaEliminaCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\FrmBuscaEliminaCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\FrmEliminaCompra.Designer.vb">
+      <DependentUpon>FrmEliminaCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\FrmEliminaCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\PermisoElimina\FrmPermisoEli.Designer.vb">
+      <DependentUpon>FrmPermisoEli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\EliminaComprasOro\PermisoElimina\FrmPermisoEli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\BuscaProveedorOro\FrmBuscaProveedor.designer.vb">
+      <DependentUpon>FrmBuscaProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\BuscaProveedorOro\FrmBuscaProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ComprasOro\FrmCompras.Designer.vb">
+      <DependentUpon>FrmCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ComprasOro\FrmCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\Reporte_ComprasOro\FrmEscojeImp.Designer.vb">
+      <DependentUpon>FrmEscojeImp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\Reporte_ComprasOro\FrmEscojeImp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ModificaComprasOro\FrmBuscaModiCompras.Designer.vb">
+      <DependentUpon>FrmBuscaModiCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ModificaComprasOro\FrmBuscaModiCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\Menu_ComprasOro\FrmMenuCompras.Designer.vb">
+      <DependentUpon>FrmMenuCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\Menu_ComprasOro\FrmMenuCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Oro\ModificaComprasOro\FrmModiCompras.Designer.vb">
+      <DependentUpon>FrmModiCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Oro\ModificaComprasOro\FrmModiCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\BuscaProveedorPlata\FrmBuscaProvPlata.Designer.vb">
+      <DependentUpon>FrmBuscaProvPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\BuscaProveedorPlata\FrmBuscaProvPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\ComprasPlata\FrmComprasPlata.Designer.vb">
+      <DependentUpon>FrmComprasPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\ComprasPlata\FrmComprasPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\FrmBuscaEliminaComprasPlata.Designer.vb">
+      <DependentUpon>FrmBuscaEliminaComprasPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\FrmBuscaEliminaComprasPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\FrmEliminaCompraPlata.Designer.vb">
+      <DependentUpon>FrmEliminaCompraPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\FrmEliminaCompraPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\PermisoElimina\FrmPermisoEliPlata.Designer.vb">
+      <DependentUpon>FrmPermisoEliPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\EliminaComprasPlata\PermisoElimina\FrmPermisoEliPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\MenuComprasPlata\FrmMenuComPlata.Designer.vb">
+      <DependentUpon>FrmMenuComPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\MenuComprasPlata\FrmMenuComPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\ModificaComprasPlata\FrmBuscaModiCompPlata.Designer.vb">
+      <DependentUpon>FrmBuscaModiCompPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\ModificaComprasPlata\FrmBuscaModiCompPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\ModificaComprasPlata\FrmModiCompraPlata.Designer.vb">
+      <DependentUpon>FrmModiCompraPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\ModificaComprasPlata\FrmModiCompraPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Plata\ReporteCompraPlata\FrmEscojeImpPlata.Designer.vb">
+      <DependentUpon>FrmEscojeImpPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Plata\ReporteCompraPlata\FrmEscojeImpPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\BuscaProveedorPlatino\FrmBuscaProvPlatino.Designer.vb">
+      <DependentUpon>FrmBuscaProvPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\BuscaProveedorPlatino\FrmBuscaProvPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\ComprasPlatino\FrmComprasPlatino.Designer.vb">
+      <DependentUpon>FrmComprasPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\ComprasPlatino\FrmComprasPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\FrmBuscaEliminaComprasPlatino.Designer.vb">
+      <DependentUpon>FrmBuscaEliminaComprasPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\FrmBuscaEliminaComprasPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\FrmEliminaCompraPlatino.Designer.vb">
+      <DependentUpon>FrmEliminaCompraPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\FrmEliminaCompraPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\PermisoElimina\FrmPermisoEliPlatino.Designer.vb">
+      <DependentUpon>FrmPermisoEliPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\EliminaComprasPlatino\PermisoElimina\FrmPermisoEliPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\MenuComprasPlatino\FrmMenuComPlatino.Designer.vb">
+      <DependentUpon>FrmMenuComPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\MenuComprasPlatino\FrmMenuComPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\ModificaComprasPlatino\FrmBuscaModiCompPlatino.Designer.vb">
+      <DependentUpon>FrmBuscaModiCompPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\ModificaComprasPlatino\FrmBuscaModiCompPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\ModificaComprasPlatino\FrmModiCompraPlatino.Designer.vb">
+      <DependentUpon>FrmModiCompraPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\ModificaComprasPlatino\FrmModiCompraPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\Platino\ReporteCompraPlatino\FrmEscojeImpPlatino.Designer.vb">
+      <DependentUpon>FrmEscojeImpPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\Platino\ReporteCompraPlatino\FrmEscojeImpPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaLink\FrmCajaConsuAnt.Designer.vb">
+      <DependentUpon>FrmCajaConsuAnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaLink\FrmCajaConsuAnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaLink\FrmConsuAnt.designer.vb">
+      <DependentUpon>FrmConsuAnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaLink\FrmConsuAnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet11.vb">
+      <DependentUpon>DbmineroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet13.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet14.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet15.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet16.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet17.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet18.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet18.vb">
+      <DependentUpon>DbmineroDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet19.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet20.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet21.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet21.vb">
+      <DependentUpon>DbmineroDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet22.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet23.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet23.vb">
+      <DependentUpon>DbmineroDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet24.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet25.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet25.vb">
+      <DependentUpon>DbmineroDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet26.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet27.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet28.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet28.vb">
+      <DependentUpon>DbmineroDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet29.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet30.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet31.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet32.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet33.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet34.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet34.vb">
+      <DependentUpon>DbmineroDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet35.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet35.vb">
+      <DependentUpon>DbmineroDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet36.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet37.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet38.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet39.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbmineroDataSet9.vb">
+      <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\Fechas.Designer.vb">
+      <DependentUpon>Fechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\Fechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmAgregaHuella.Designer.vb">
+      <DependentUpon>FrmAgregaHuella.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmAgregaHuella.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmBuscaEvidencia.Designer.vb">
+      <DependentUpon>FrmBuscaEvidencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmBuscaEvidencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmEvidencia.Designer.vb">
+      <DependentUpon>FrmEvidencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmEvidencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmTomaFoto.Designer.vb">
+      <DependentUpon>FrmTomaFoto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmTomaFoto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmTomarHuellas.Designer.vb">
+      <DependentUpon>FrmTomarHuellas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmTomarHuellas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\FrmVerifica.Designer.vb">
+      <DependentUpon>FrmVerifica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\FrmVerifica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evidencia\ImprimeEvidencia\FrmImpEvidencia.Designer.vb">
+      <DependentUpon>FrmImpEvidencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Evidencia\ImprimeEvidencia\FrmImpEvidencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funciones\AutoComple.vb" />
+    <Compile Include="Funciones\clsResizeForm.vb" />
+    <Compile Include="Funciones\Conectar.vb" />
+    <Compile Include="Funciones\Conexiones.vb" />
+    <Compile Include="Funciones\Correo.vb" />
+    <Compile Include="Funciones\CorreoCaja.vb" />
+    <Compile Include="Funciones\EmpresaDatos.vb" />
+    <Compile Include="Funciones\LimpiarObjetos.vb" />
+    <Compile Include="Funciones\ModuleFrm.vb" />
+    <Compile Include="Funciones\Mod_numeros.vb" />
+    <Compile Include="Funciones\NumALetras.vb" />
+    <Compile Include="Funciones\ValidaLetrasNum.vb" />
+    <Compile Include="Funciones\VerificarSerial.vb" />
+    <Compile Include="Fundicion\FrmMenuFundiciones.Designer.vb">
+      <DependentUpon>FrmMenuFundiciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\FrmMenuFundiciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\FrmMenuFundi.Designer.vb">
+      <DependentUpon>FrmMenuFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\FrmMenuFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmTrasladosdeFundicion.Designer.vb">
+      <DependentUpon>FrmTrasladosdeFundicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmTrasladosdeFundicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Traslada\FrmRptFundiTraslada.Designer.vb">
+      <DependentUpon>FrmRptFundiTraslada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Traslada\FrmRptFundiTraslada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Eliminar\FrmSaldoFundicion.Designer.vb">
+      <DependentUpon>FrmSaldoFundicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Eliminar\FrmSaldoFundicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Traslada\FrmTrasladaFundi.designer.vb">
+      <DependentUpon>FrmTrasladaFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Traslada\FrmTrasladaFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmBuscaProvFundi.Designer.vb">
+      <DependentUpon>FrmBuscaProvFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmBuscaProvFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmFundiRptxProv.Designer.vb">
+      <DependentUpon>FrmFundiRptxProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmFundiRptxProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\Reimprime\FrmSeleReimpDocTraslada.Designer.vb">
+      <DependentUpon>FrmSeleReimpDocTraslada.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\Reimprime\FrmSeleReimpDocTraslada.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Eliminar\FrmEliminaFundi.Designer.vb">
+      <DependentUpon>FrmEliminaFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Eliminar\FrmEliminaFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\FrmMenuRepFundi.Designer.vb">
+      <DependentUpon>FrmMenuRepFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\FrmMenuRepFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmSeleFechaFundicion.Designer.vb">
+      <DependentUpon>FrmSeleFechaFundicion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmSeleFechaFundicion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\SaldosFundi\FrmRptSaldosFundi.Designer.vb">
+      <DependentUpon>FrmRptSaldosFundi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Oro\Reportes\SaldosFundi\FrmRptSaldosFundi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Eliminar\FrmEliminaFundi_Plata.Designer.vb">
+      <DependentUpon>FrmEliminaFundi_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Eliminar\FrmEliminaFundi_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\FrmMenuFundi_Plata.Designer.vb">
+      <DependentUpon>FrmMenuFundi_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\FrmMenuFundi_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmBuscaProvFundiPlata.Designer.vb">
+      <DependentUpon>FrmBuscaProvFundiPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmBuscaProvFundiPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmFundiRptxProvPlata.Designer.vb">
+      <DependentUpon>FrmFundiRptxProvPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmFundiRptxProvPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlata.Designer.vb">
+      <DependentUpon>FrmSeleReimpDocTrasladaPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Traslada\FrmRptFundiTraslada_Plata.Designer.vb">
+      <DependentUpon>FrmRptFundiTraslada_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Traslada\FrmRptFundiTraslada_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Eliminar\FrmSaldoFundicion_Plata.Designer.vb">
+      <DependentUpon>FrmSaldoFundicion_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Eliminar\FrmSaldoFundicion_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Traslada\FrmTrasaladaFundi_Plata.Designer.vb">
+      <DependentUpon>FrmTrasaladaFundi_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Traslada\FrmTrasaladaFundi_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\FrmMenuRepFundi_Plata.Designer.vb">
+      <DependentUpon>FrmMenuRepFundi_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\FrmMenuRepFundi_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Plata.Designer.vb">
+      <DependentUpon>FrmSeleFechaFundicion_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlata.Designer.vb">
+      <DependentUpon>FrmTrasladosdeFundicionPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\SaldosFundi\FrmRptSaldosFundi_Plata.Designer.vb">
+      <DependentUpon>FrmRptSaldosFundi_Plata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Plata\Reportes\SaldosFundi\FrmRptSaldosFundi_Plata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Eliminar\FrmEliminaFundi_Platino.Designer.vb">
+      <DependentUpon>FrmEliminaFundi_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Eliminar\FrmEliminaFundi_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\FrmMenuFundi_Platino.Designer.vb">
+      <DependentUpon>FrmMenuFundi_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\FrmMenuFundi_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmBuscaProvFundiPlatino.Designer.vb">
+      <DependentUpon>FrmBuscaProvFundiPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmBuscaProvFundiPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmFundiRptxProvPlatino.Designer.vb">
+      <DependentUpon>FrmFundiRptxProvPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmFundiRptxProvPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlatino.Designer.vb">
+      <DependentUpon>FrmSeleReimpDocTrasladaPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlatino.Designer.vb">
+      <DependentUpon>FrmTrasladosdeFundicionPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Traslada\FrmRptFundiTraslada_Platino.Designer.vb">
+      <DependentUpon>FrmRptFundiTraslada_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Traslada\FrmRptFundiTraslada_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Eliminar\FrmSaldoFundicion_Platino.Designer.vb">
+      <DependentUpon>FrmSaldoFundicion_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Eliminar\FrmSaldoFundicion_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Traslada\FrmTrasladaFundi_Platino.Designer.vb">
+      <DependentUpon>FrmTrasladaFundi_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Traslada\FrmTrasladaFundi_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\FrmMenuRepFundi_Platino.Designer.vb">
+      <DependentUpon>FrmMenuRepFundi_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\FrmMenuRepFundi_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Platino.Designer.vb">
+      <DependentUpon>FrmSeleFechaFundicion_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\SaldosFundi\FrmRptSaldosFundi_Platino.Designer.vb">
+      <DependentUpon>FrmRptSaldosFundi_Platino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fundicion\Platino\Reportes\SaldosFundi\FrmRptSaldosFundi_Platino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\CaptureForm.Designer.vb">
+      <DependentUpon>CaptureForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HuellaNueva\CaptureForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\EnrollmentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaCargar.Designer.vb">
+      <DependentUpon>FrmHuellaCargar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaCargar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaIngresa.Designer.vb">
+      <DependentUpon>FrmHuellaIngresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaIngresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaMenu.Designer.vb">
+      <DependentUpon>FrmHuellaMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaVerificacion.designer.vb">
+      <DependentUpon>FrmHuellaVerificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HuellaNueva\FrmHuellaVerificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Huella\AppData.vb" />
+    <Compile Include="Huella\FrmInicial.designer.vb">
+      <DependentUpon>FrmInicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Huella\FrmInicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Huella\Frm_Agregar.designer.vb">
+      <DependentUpon>Frm_Agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Huella\Frm_Agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Huella\Verificacion.designer.vb">
+      <DependentUpon>Verificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Huella\Verificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioMenu\FrmAdmin.Designer.vb">
+      <DependentUpon>FrmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InicioMenu\FrmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioMenu\FrmHerramAyuda.Designer.vb">
+      <DependentUpon>FrmHerramAyuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InicioMenu\FrmHerramAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\FrmLogin.designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\FrmRecupera.designer.vb">
+      <DependentUpon>FrmRecupera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\FrmRecupera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\FrmSplash.designer.vb">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\FrmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectorQR\GenerarCodigosQR.designer.vb">
+      <DependentUpon>GenerarCodigosQR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LectorQR\GenerarCodigosQR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\CambioNit\FrmCambioNit.Designer.vb">
+      <DependentUpon>FrmCambioNit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\CambioNit\FrmCambioNit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\CambioNit\FrmLoginCambioNit.Designer.vb">
+      <DependentUpon>FrmLoginCambioNit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\CambioNit\FrmLoginCambioNit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmAutoDian.Designer.vb">
+      <DependentUpon>FrmAutoDian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmAutoDian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmBancos.designer.vb">
+      <DependentUpon>FrmBancos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmBancos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCargos.designer.vb">
+      <DependentUpon>FrmCargos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCiudades.designer.vb">
+      <DependentUpon>FrmCiudades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCiudades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCiuu.designer.vb">
+      <DependentUpon>FrmCiuu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmCiuu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmEmpresa.designer.vb">
+      <DependentUpon>FrmEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmEspecialidades.designer.vb">
+      <DependentUpon>FrmEspecialidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmEspecialidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmRegimen.designer.vb">
+      <DependentUpon>FrmRegimen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmRegimen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoCta.designer.vb">
+      <DependentUpon>FrmTipoCta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoCta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoDocu.Designer.vb">
+      <DependentUpon>FrmTipoDocu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoDocu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoOperacion.Designer.vb">
+      <DependentUpon>FrmTipoOperacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTipoOperacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTiposUser.designer.vb">
+      <DependentUpon>FrmTiposUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmTiposUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmUsuarios.designer.vb">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\FrmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin\Zonas\FrmZonas.Designer.vb">
+      <DependentUpon>FrmZonas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin\Zonas\FrmZonas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\FrmRangoAcumulado.Designer.vb">
+      <DependentUpon>FrmRangoAcumulado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\FrmRangoAcumulado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\FrmRptAcomula.Designer.vb">
+      <DependentUpon>FrmRptAcomula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\FrmRptAcomula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRangoAcumula.Designer.vb">
+      <DependentUpon>FrmRangoAcumula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRangoAcumula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaOro.Designer.vb">
+      <DependentUpon>FrmRptAcomulaOro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaOro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlata.Designer.vb">
+      <DependentUpon>FrmRptAcomulaPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlatino.Designer.vb">
+      <DependentUpon>FrmRptAcomulaPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmAcumXcliente.Designer.vb">
+      <DependentUpon>FrmAcumXcliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmAcumXcliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmBuscaProv.designer.vb">
+      <DependentUpon>FrmBuscaProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmBuscaProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmCajaAcumXcliente.designer.vb">
+      <DependentUpon>FrmCajaAcumXcliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmCajaAcumXcliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmCajaBuscaProv.designer.vb">
+      <DependentUpon>FrmCajaBuscaProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmCajaBuscaProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmRptAcumCliente.Designer.vb">
+      <DependentUpon>FrmRptAcumCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\AcumXcliente\FrmRptAcumCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Clientes\ClientesCedula\FrmClienteCedula.Designer.vb">
+      <DependentUpon>FrmClienteCedula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Clientes\ClientesCedula\FrmClienteCedula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Clientes\FrmListaClientes.Designer.vb">
+      <DependentUpon>FrmListaClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Clientes\FrmListaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ComprasConsecutivo\FrmRptCompConsecutivo.Designer.vb">
+      <DependentUpon>FrmRptCompConsecutivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ComprasConsecutivo\FrmRptCompConsecutivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Declara\Documento_Origen.Designer.vb">
+      <DependentUpon>Documento_Origen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Declara\Documento_Origen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Declara\FrmDecCompras.Designer.vb">
+      <DependentUpon>FrmDecCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Declara\FrmDecCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Declara\FrmNuevoDeclara.Designer.vb">
+      <DependentUpon>FrmNuevoDeclara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Declara\FrmNuevoDeclara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Egreso\Documento_Egreso.Designer.vb">
+      <DependentUpon>Documento_Egreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Egreso\Documento_Egreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\Documento_Equivalente.Designer.vb">
+      <DependentUpon>Documento_Equivalente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\Documento_Equivalente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\FrmEquivalenteDec.Designer.vb">
+      <DependentUpon>FrmEquivalenteDec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\FrmEquivalenteDec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Egreso\FrmRptEgresoEquivalente.Designer.vb">
+      <DependentUpon>FrmRptEgresoEquivalente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Egreso\FrmRptEgresoEquivalente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\FrmNuevoEquivalente.Designer.vb">
+      <DependentUpon>FrmNuevoEquivalente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Equivalente\FrmNuevoEquivalente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmProveeMenu.Designer.vb">
+      <DependentUpon>FrmProveeMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmProveeMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportes.designer.vb">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ComprasConsecutivo\FrmComprasConsecutivo.Designer.vb">
+      <DependentUpon>FrmComprasConsecutivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ComprasConsecutivo\FrmComprasConsecutivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\FrmDisponible.Designer.vb">
+      <DependentUpon>FrmDisponible.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\FrmDisponible.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\FrmFechaDisponible.Designer.vb">
+      <DependentUpon>FrmFechaDisponible.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\FrmFechaDisponible.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\RptZonaDpto\FrmRptFullZonasDpto.Designer.vb">
+      <DependentUpon>FrmRptFullZonasDpto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\RptZonaDpto\FrmRptFullZonasDpto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\RptZonaDpto\FrmZonasDpto.Designer.vb">
+      <DependentUpon>FrmZonasDpto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\MaterialDisponible\RptZonaDpto\FrmZonasDpto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\FrmFechasXproveedores.Designer.vb">
+      <DependentUpon>FrmFechasXproveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\FrmFechasXproveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\FrmRptFechaProv.Designer.vb">
+      <DependentUpon>FrmRptFechaProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Proveedores\FrmRptFechaProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmConsultaCompOroPlata.Designer.vb">
+      <DependentUpon>FrmConsultaCompOroPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmConsultaCompOroPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmLiquidaCompraOroPlata.Designer.vb">
+      <DependentUpon>FrmLiquidaCompraOroPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmLiquidaCompraOroPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmRangoFechasRegalias.Designer.vb">
+      <DependentUpon>FrmRangoFechasRegalias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmRangoFechasRegalias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmRpt_Regalias.Designer.vb">
+      <DependentUpon>FrmRpt_Regalias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Regalias\FrmRpt_Regalias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmCajaSeleDeclaraMineraReimp.Designer.vb">
+      <DependentUpon>FrmCajaSeleDeclaraMineraReimp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmCajaSeleDeclaraMineraReimp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReimpDeclara.Designer.vb">
+      <DependentUpon>FrmReimpDeclara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReimpDeclara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReImpNuevoDeclara.Designer.vb">
+      <DependentUpon>FrmReImpNuevoDeclara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReImpNuevoDeclara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmRimpANMTrim.Designer.vb">
+      <DependentUpon>FrmRimpANMTrim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmRimpANMTrim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmSeleDeclaraMineraReimp.Designer.vb">
+      <DependentUpon>FrmSeleDeclaraMineraReimp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmSeleDeclaraMineraReimp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Egreso\FrmReimprimeEgreso.Designer.vb">
+      <DependentUpon>FrmReimprimeEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Egreso\FrmReimprimeEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Egreso\FrmSeleEgresoReimp.Designer.vb">
+      <DependentUpon>FrmSeleEgresoReimp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Egreso\FrmSeleEgresoReimp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Equivalente\FrmNuevoReimpEqui.Designer.vb">
+      <DependentUpon>FrmNuevoReimpEqui.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Equivalente\FrmNuevoReimpEqui.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Equivalente\FrmSeleEquivaReim.Designer.vb">
+      <DependentUpon>FrmSeleEquivaReim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Equivalente\FrmSeleEquivaReim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\FrmEscojeReimpDocus.Designer.vb">
+      <DependentUpon>FrmEscojeReimpDocus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\FrmEscojeReimpDocus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Vincula\FrmReimprimeVincula.Designer.vb">
+      <DependentUpon>FrmReimprimeVincula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Vincula\FrmReimprimeVincula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Vincula\FrmSeleReimpVincula.Designer.vb">
+      <DependentUpon>FrmSeleReimpVincula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Vincula\FrmSeleReimpVincula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Retefuente\FrmRptCertiRF.Designer.vb">
+      <DependentUpon>FrmRptCertiRF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Retefuente\FrmRptCertiRF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Retefuente\FrmSeleCertificadoRF.Designer.vb">
+      <DependentUpon>FrmSeleCertificadoRF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Retefuente\FrmSeleCertificadoRF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaDiaria\FrmRangoTasasDiarias.designer.vb">
+      <DependentUpon>FrmRangoTasasDiarias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaDiaria\FrmRangoTasasDiarias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaDiaria\FrmRptTasaDiaria.Designer.vb">
+      <DependentUpon>FrmRptTasaDiaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaDiaria\FrmRptTasaDiaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaMensual\FrmRangoTasMensual.Designer.vb">
+      <DependentUpon>FrmRangoTasMensual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaMensual\FrmRangoTasMensual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaMensual\FrmRptTasaMensual.Designer.vb">
+      <DependentUpon>FrmRptTasaMensual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Tasas\TasaMensual\FrmRptTasaMensual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Vincular\FrmRptVincula.Designer.vb">
+      <DependentUpon>FrmRptVincula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Vincular\FrmRptVincula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Zonas\FrmZonasAuto.Designer.vb">
+      <DependentUpon>FrmZonasAuto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Zonas\FrmZonasAuto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretaria\FrmSecretaria.designer.vb">
+      <DependentUpon>FrmSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Secretaria\FrmSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmListasdeConsulta.Designer.vb">
+      <DependentUpon>FrmListasdeConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmListasdeConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmMenuTax.Designer.vb">
+      <DependentUpon>FrmMenuTax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmMenuTax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmRegaliasOro.Designer.vb">
+      <DependentUpon>FrmRegaliasOro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmRegaliasOro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmRetefuenteOro.designer.vb">
+      <DependentUpon>FrmRetefuenteOro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmRetefuenteOro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmTasaBaseDiaria.Designer.vb">
+      <DependentUpon>FrmTasaBaseDiaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\FrmTasaBaseDiaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmTasasOro.Designer.vb">
+      <DependentUpon>FrmTasasOro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Oro\FrmTasasOro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmRegaliasPlata.Designer.vb">
+      <DependentUpon>FrmRegaliasPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmRegaliasPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmRetefuentePlata.Designer.vb">
+      <DependentUpon>FrmRetefuentePlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmRetefuentePlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmTasasPlata.Designer.vb">
+      <DependentUpon>FrmTasasPlata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Plata\FrmTasasPlata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmRegaliasPlatino.Designer.vb">
+      <DependentUpon>FrmRegaliasPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmRegaliasPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmRetefuentePlatino.Designer.vb">
+      <DependentUpon>FrmRetefuentePlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmRetefuentePlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmTasaPlatino.Designer.vb">
+      <DependentUpon>FrmTasaPlatino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TasasDiarias\Platino\FrmTasaPlatino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIAF\FrmReporteUIAF.Designer.vb">
+      <DependentUpon>FrmReporteUIAF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UIAF\FrmReporteUIAF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIAF\FrmSeleRptUiaf.Designer.vb">
+      <DependentUpon>FrmSeleRptUiaf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UIAF\FrmSeleRptUiaf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIAF\ImprimeRptUiaf\FrmUIAFrpt.designer.vb">
+      <DependentUpon>FrmUIAFrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UIAF\ImprimeRptUiaf\FrmUIAFrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidaEmpresa\FrmValidaEmp.Designer.vb">
+      <DependentUpon>FrmValidaEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ValidaEmpresa\FrmValidaEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Compras\FrmBuscaEmp.Designer.vb">
+      <DependentUpon>FrmBuscaEmp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Compras\FrmBuscaEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Compras\FrmCompraTraslado.Designer.vb">
+      <DependentUpon>FrmCompraTraslado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Compras\FrmCompraTraslado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Compras\Reportes\FrmNuevaCompra.Designer.vb">
+      <DependentUpon>FrmNuevaCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Compras\Reportes\FrmNuevaCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\FrmVentas.designer.vb">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FrmVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\VentaFundi\FrmBuscaVenta.Designer.vb">
+      <DependentUpon>FrmBuscaVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\VentaFundi\FrmBuscaVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\VentaFundi\FrmVentaGold.Designer.vb">
+      <DependentUpon>FrmVentaGold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\VentaFundi\FrmVentaGold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ayudas\AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayudas\FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayudas\FrmDigitoVerifca.resx">
+      <DependentUpon>FrmDigitoVerifca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayudas\FrmPartes.resx">
+      <DependentUpon>FrmPartes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\CopiaEntreFechas\FrmCopiaParcial.resx">
+      <DependentUpon>FrmCopiaParcial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\CopiaEntreFechas\FrmCopiaParcialAct.resx">
+      <DependentUpon>FrmCopiaParcialAct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\CopiaEntreFechas\FrmCopiaParcialClientes.resx">
+      <DependentUpon>FrmCopiaParcialClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\CopiaEntreFechas\FrmParcial.resx">
+      <DependentUpon>FrmParcial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\FrmBackup.resx">
+      <DependentUpon>FrmBackup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\FrmCajaBackup.resx">
+      <DependentUpon>FrmCajaBackup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\FrmCajaCorreo.resx">
+      <DependentUpon>FrmCajaCorreo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\FrmCorreo.resx">
+      <DependentUpon>FrmCorreo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Internet\FrmChkInternet.resx">
+      <DependentUpon>FrmChkInternet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmEliminaEgreso.resx">
+      <DependentUpon>FrmEliminaEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\FrmSeleEliminaEgreso.resx">
+      <DependentUpon>FrmSeleEliminaEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmImpElimEgre.resx">
+      <DependentUpon>FrmImpElimEgre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmReimpEgrEliminado.resx">
+      <DependentUpon>FrmReimpEgrEliminado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\FrmSeleEgreEliminado.resx">
+      <DependentUpon>FrmSeleEgreEliminado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\RptImpElimEgre.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\EliminaEgreso\ImprimeElimina\RptReimpEgreEliminado.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\FrmBuscaClienteEgreso.resx">
+      <DependentUpon>FrmBuscaClienteEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\FrmEgresoCajaMenor.resx">
+      <DependentUpon>FrmEgresoCajaMenor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\ImprimeEgreso\FrmRptImpEgreso.resx">
+      <DependentUpon>FrmRptImpEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\ImprimeEgreso\RptEgresoCM.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmRptEg.resx">
+      <DependentUpon>FrmRptEg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\FrmSeleEgresos.resx">
+      <DependentUpon>FrmSeleEgresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Egresos\ReimprimeEgreso\RptReimpEgreso.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\FrmCajaMenu.resx">
+      <DependentUpon>FrmCajaMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\FrmLoginCaja.resx">
+      <DependentUpon>FrmLoginCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\FrmReeimpMenu.resx">
+      <DependentUpon>FrmReeimpMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmEliminaIngreso.resx">
+      <DependentUpon>FrmEliminaIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\FrmSeleEliminaIngreso.resx">
+      <DependentUpon>FrmSeleEliminaIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmImpElimIngre.resx">
+      <DependentUpon>FrmImpElimIngre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmReimpIngreEliminado.resx">
+      <DependentUpon>FrmReimpIngreEliminado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\FrmSeleIngreEliminado.resx">
+      <DependentUpon>FrmSeleIngreEliminado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\RptImpElimIngreso.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\EliminaIngreso\ImprimeIngreso\RptReimpIngreEliminado.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\FrmBuscaClienteCajaIngresos.resx">
+      <DependentUpon>FrmBuscaClienteCajaIngresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\FrmIngresoCajaMenor.resx">
+      <DependentUpon>FrmIngresoCajaMenor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\ImprimeIngreso\FrmRptImpIngreso.resx">
+      <DependentUpon>FrmRptImpIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\ImprimeIngreso\RptIngresoCM.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmRptIng.resx">
+      <DependentUpon>FrmRptIng.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\FrmSeleIngresos.resx">
+      <DependentUpon>FrmSeleIngresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\Ingresos\ReimprimeIngreso\RptReimpIngreso.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\FrmReporteFechasTotalCM.resx">
+      <DependentUpon>FrmReporteFechasTotalCM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalCM.resx">
+      <DependentUpon>FrmRptTotalCM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalEGR.resx">
+      <DependentUpon>FrmRptTotalEGR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\FrmRptTotalING.resx">
+      <DependentUpon>FrmRptTotalING.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\FrmSeleccionaReporte.resx">
+      <DependentUpon>FrmSeleccionaReporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\RptTotalCM.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\RptTotalEGR.rdlc" />
+    <EmbeddedResource Include="CajaMenor\CajaInicio\ReporteTotal\RptTotalING.rdlc" />
+    <EmbeddedResource Include="CajaMenor\FrmCajaMenor.resx">
+      <DependentUpon>FrmCajaMenor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteActividad\FrmBuscaEmpCli.resx">
+      <DependentUpon>FrmBuscaEmpCli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteActividad\FrmDetEmpresa.resx">
+      <DependentUpon>FrmDetEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\CambioNombre\FrmBuscaCambio.resx">
+      <DependentUpon>FrmBuscaCambio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\CambioNombre\FrmCambioName.resx">
+      <DependentUpon>FrmCambioName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteActividad\FrmClienteActividad.resx">
+      <DependentUpon>FrmClienteActividad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Consulta\ConsultaClientes\FrmFiltroC.resx">
+      <DependentUpon>FrmFiltroC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Consulta\ConsultaUsuarios\FrmFiltro.resx">
+      <DependentUpon>FrmFiltro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Proveedores\FrmFoto.resx">
+      <DependentUpon>FrmFoto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Proveedores\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\VisualizaClientes\FrmBuscaProve.resx">
+      <DependentUpon>FrmBuscaProve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\VisualizaClientes\FrmVerClientes.resx">
+      <DependentUpon>FrmVerClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ConsultaComprasOro\FrmBuscaTotalComprado.resx">
+      <DependentUpon>FrmBuscaTotalComprado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ConsultaComprasOro\FrmConsuCompras.resx">
+      <DependentUpon>FrmConsuCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ConsultaComprasOro\FrmTopesCompras.resx">
+      <DependentUpon>FrmTopesCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ConsultaComprasOro\FrmTotalComprado.resx">
+      <DependentUpon>FrmTotalComprado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\EliminaComprasOro\FrmBuscaEliminaCompras.resx">
+      <DependentUpon>FrmBuscaEliminaCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\EliminaComprasOro\FrmEliminaCompra.resx">
+      <DependentUpon>FrmEliminaCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\EliminaComprasOro\PermisoElimina\FrmPermisoEli.resx">
+      <DependentUpon>FrmPermisoEli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\BuscaProveedorOro\FrmBuscaProveedor.resx">
+      <DependentUpon>FrmBuscaProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ComprasOro\FrmCompras.resx">
+      <DependentUpon>FrmCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\Reporte_ComprasOro\FrmEscojeImp.resx">
+      <DependentUpon>FrmEscojeImp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ModificaComprasOro\FrmBuscaModiCompras.resx">
+      <DependentUpon>FrmBuscaModiCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\Menu_ComprasOro\FrmMenuCompras.resx">
+      <DependentUpon>FrmMenuCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Oro\ModificaComprasOro\FrmModiCompras.resx">
+      <DependentUpon>FrmModiCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\BuscaProveedorPlata\FrmBuscaProvPlata.resx">
+      <DependentUpon>FrmBuscaProvPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\ComprasPlata\FrmComprasPlata.resx">
+      <DependentUpon>FrmComprasPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\EliminaComprasPlata\FrmBuscaEliminaComprasPlata.resx">
+      <DependentUpon>FrmBuscaEliminaComprasPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\EliminaComprasPlata\FrmEliminaCompraPlata.resx">
+      <DependentUpon>FrmEliminaCompraPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\EliminaComprasPlata\PermisoElimina\FrmPermisoEliPlata.resx">
+      <DependentUpon>FrmPermisoEliPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\MenuComprasPlata\FrmMenuComPlata.resx">
+      <DependentUpon>FrmMenuComPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\ModificaComprasPlata\FrmBuscaModiCompPlata.resx">
+      <DependentUpon>FrmBuscaModiCompPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\ModificaComprasPlata\FrmModiCompraPlata.resx">
+      <DependentUpon>FrmModiCompraPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Plata\ReporteCompraPlata\FrmEscojeImpPlata.resx">
+      <DependentUpon>FrmEscojeImpPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\BuscaProveedorPlatino\FrmBuscaProvPlatino.resx">
+      <DependentUpon>FrmBuscaProvPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\ComprasPlatino\FrmComprasPlatino.resx">
+      <DependentUpon>FrmComprasPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\EliminaComprasPlatino\FrmBuscaEliminaComprasPlatino.resx">
+      <DependentUpon>FrmBuscaEliminaComprasPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\EliminaComprasPlatino\FrmEliminaCompraPlatino.resx">
+      <DependentUpon>FrmEliminaCompraPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\EliminaComprasPlatino\PermisoElimina\FrmPermisoEliPlatino.resx">
+      <DependentUpon>FrmPermisoEliPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\MenuComprasPlatino\FrmMenuComPlatino.resx">
+      <DependentUpon>FrmMenuComPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\ModificaComprasPlatino\FrmBuscaModiCompPlatino.resx">
+      <DependentUpon>FrmBuscaModiCompPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\ModificaComprasPlatino\FrmModiCompraPlatino.resx">
+      <DependentUpon>FrmModiCompraPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\Platino\ReporteCompraPlatino\FrmEscojeImpPlatino.resx">
+      <DependentUpon>FrmEscojeImpPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaLink\FrmCajaConsuAnt.resx">
+      <DependentUpon>FrmCajaConsuAnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaLink\FrmConsuAnt.resx">
+      <DependentUpon>FrmConsuAnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\Fechas.resx">
+      <DependentUpon>Fechas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmAgregaHuella.resx">
+      <DependentUpon>FrmAgregaHuella.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmBuscaEvidencia.resx">
+      <DependentUpon>FrmBuscaEvidencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmEvidencia.resx">
+      <DependentUpon>FrmEvidencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmTomaFoto.resx">
+      <DependentUpon>FrmTomaFoto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmTomarHuellas.resx">
+      <DependentUpon>FrmTomarHuellas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\FrmVerifica.resx">
+      <DependentUpon>FrmVerifica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\ImprimeEvidencia\FrmImpEvidencia.resx">
+      <DependentUpon>FrmImpEvidencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Evidencia\ImprimeEvidencia\RptImpEvidencia.rdlc" />
+    <EmbeddedResource Include="Fundicion\FrmMenuFundiciones.resx">
+      <DependentUpon>FrmMenuFundiciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\FrmMenuFundi.resx">
+      <DependentUpon>FrmMenuFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmTrasladosdeFundicion.resx">
+      <DependentUpon>FrmTrasladosdeFundicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\ReporteTraslados\Reporte_Traslados_Oro.rdlc" />
+    <EmbeddedResource Include="Fundicion\Oro\Traslada\FrmRptFundiTraslada.resx">
+      <DependentUpon>FrmRptFundiTraslada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Eliminar\FrmSaldoFundicion.resx">
+      <DependentUpon>FrmSaldoFundicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Traslada\FrmTrasladaFundi.resx">
+      <DependentUpon>FrmTrasladaFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmBuscaProvFundi.resx">
+      <DependentUpon>FrmBuscaProvFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\DetalleTraslados\FrmFundiRptxProv.resx">
+      <DependentUpon>FrmFundiRptxProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\DetalleTraslados\RptProvFundi.rdlc" />
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\Reimprime\FrmSeleReimpDocTraslada.resx">
+      <DependentUpon>FrmSeleReimpDocTraslada.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Eliminar\FrmEliminaFundi.resx">
+      <DependentUpon>FrmEliminaFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\FrmMenuRepFundi.resx">
+      <DependentUpon>FrmMenuRepFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\ReporteTraslados\FrmSeleFechaFundicion.resx">
+      <DependentUpon>FrmSeleFechaFundicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\SaldosFundi\FrmRptSaldosFundi.resx">
+      <DependentUpon>FrmRptSaldosFundi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Oro\Reportes\SaldosFundi\RptSaldosFundi.rdlc" />
+    <EmbeddedResource Include="Fundicion\Oro\Traslada\RptFundiTraslada.rdlc" />
+    <EmbeddedResource Include="Fundicion\Plata\Eliminar\FrmEliminaFundi_Plata.resx">
+      <DependentUpon>FrmEliminaFundi_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\FrmMenuFundi_Plata.resx">
+      <DependentUpon>FrmMenuFundi_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmBuscaProvFundiPlata.resx">
+      <DependentUpon>FrmBuscaProvFundiPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\DetalleTraslados\FrmFundiRptxProvPlata.resx">
+      <DependentUpon>FrmFundiRptxProvPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlata.resx">
+      <DependentUpon>FrmSeleReimpDocTrasladaPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\ReporteTraslados\Reporte_Traslados_Plata.rdlc" />
+    <EmbeddedResource Include="Fundicion\Plata\Traslada\FrmRptFundiTraslada_Plata.resx">
+      <DependentUpon>FrmRptFundiTraslada_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Eliminar\FrmSaldoFundicion_Plata.resx">
+      <DependentUpon>FrmSaldoFundicion_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Traslada\FrmTrasaladaFundi_Plata.resx">
+      <DependentUpon>FrmTrasaladaFundi_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\DetalleTraslados\Detalle_Fundicion_Plata.rdlc" />
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\FrmMenuRepFundi_Plata.resx">
+      <DependentUpon>FrmMenuRepFundi_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Plata.resx">
+      <DependentUpon>FrmSeleFechaFundicion_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlata.resx">
+      <DependentUpon>FrmTrasladosdeFundicionPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\SaldosFundi\FrmRptSaldosFundi_Plata.resx">
+      <DependentUpon>FrmRptSaldosFundi_Plata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Plata\Reportes\SaldosFundi\Reporte_de_Saldos_de_Fundicion_Plata.rdlc" />
+    <EmbeddedResource Include="Fundicion\Plata\Traslada\Reporte_Fundicion_Plata.rdlc" />
+    <EmbeddedResource Include="Fundicion\Platino\Eliminar\FrmEliminaFundi_Platino.resx">
+      <DependentUpon>FrmEliminaFundi_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\FrmMenuFundi_Platino.resx">
+      <DependentUpon>FrmMenuFundi_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\DetalleTraslados\Detalle_Fundicion_Platino.rdlc" />
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmBuscaProvFundiPlatino.resx">
+      <DependentUpon>FrmBuscaProvFundiPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\DetalleTraslados\FrmFundiRptxProvPlatino.resx">
+      <DependentUpon>FrmFundiRptxProvPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\Reimprime\FrmSeleReimpDocTrasladaPlatino.resx">
+      <DependentUpon>FrmSeleReimpDocTrasladaPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmTrasladosdeFundicionPlatino.resx">
+      <DependentUpon>FrmTrasladosdeFundicionPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\ReporteTraslados\Reporte_Traslados_Platino.rdlc" />
+    <EmbeddedResource Include="Fundicion\Platino\Traslada\FrmRptFundiTraslada_Platino.resx">
+      <DependentUpon>FrmRptFundiTraslada_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Eliminar\FrmSaldoFundicion_Platino.resx">
+      <DependentUpon>FrmSaldoFundicion_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Traslada\FrmTrasladaFundi_Platino.resx">
+      <DependentUpon>FrmTrasladaFundi_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\FrmMenuRepFundi_Platino.resx">
+      <DependentUpon>FrmMenuRepFundi_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\ReporteTraslados\FrmSeleFechaFundicion_Platino.resx">
+      <DependentUpon>FrmSeleFechaFundicion_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\SaldosFundi\FrmRptSaldosFundi_Platino.resx">
+      <DependentUpon>FrmRptSaldosFundi_Platino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fundicion\Platino\Reportes\SaldosFundi\Reporte_de_Saldos_de_Fundicion_Platino.rdlc" />
+    <EmbeddedResource Include="Fundicion\Platino\Traslada\Reporte_Fundicion_Platino.rdlc" />
+    <EmbeddedResource Include="HuellaNueva\CaptureForm.resx">
+      <DependentUpon>CaptureForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\EnrollmentForm.resx">
+      <DependentUpon>EnrollmentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\FrmHuellaCargar.resx">
+      <DependentUpon>FrmHuellaCargar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\FrmHuellaIngresa.resx">
+      <DependentUpon>FrmHuellaIngresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\FrmHuellaMenu.resx">
+      <DependentUpon>FrmHuellaMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\FrmHuellaVerificacion.resx">
+      <DependentUpon>FrmHuellaVerificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HuellaNueva\ImprimeHuella\RptImpHuella.rdlc" />
+    <EmbeddedResource Include="Huella\FrmInicial.resx">
+      <DependentUpon>FrmInicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Huella\Frm_Agregar.resx">
+      <DependentUpon>Frm_Agregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Huella\Verificacion.resx">
+      <DependentUpon>Verificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioMenu\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioMenu\FrmHerramAyuda.resx">
+      <DependentUpon>FrmHerramAyuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\FrmRecupera.resx">
+      <DependentUpon>FrmRecupera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\FrmSplash.resx">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectorQR\GenerarCodigosQR.resx">
+      <DependentUpon>GenerarCodigosQR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\CambioNit\FrmCambioNit.resx">
+      <DependentUpon>FrmCambioNit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\CambioNit\FrmLoginCambioNit.resx">
+      <DependentUpon>FrmLoginCambioNit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmAutoDian.resx">
+      <DependentUpon>FrmAutoDian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmBancos.resx">
+      <DependentUpon>FrmBancos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmCargos.resx">
+      <DependentUpon>FrmCargos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmCiudades.resx">
+      <DependentUpon>FrmCiudades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmCiuu.resx">
+      <DependentUpon>FrmCiuu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmEmpresa.resx">
+      <DependentUpon>FrmEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmEspecialidades.resx">
+      <DependentUpon>FrmEspecialidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmRegimen.resx">
+      <DependentUpon>FrmRegimen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmTipoCta.resx">
+      <DependentUpon>FrmTipoCta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmTipoDocu.resx">
+      <DependentUpon>FrmTipoDocu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmTipoOperacion.resx">
+      <DependentUpon>FrmTipoOperacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmTiposUser.resx">
+      <DependentUpon>FrmTiposUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin\Zonas\FrmZonas.resx">
+      <DependentUpon>FrmZonas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\FrmRangoAcumulado.resx">
+      <DependentUpon>FrmRangoAcumulado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\FrmRptAcomula.resx">
+      <DependentUpon>FrmRptAcomula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\FrmRangoAcumula.resx">
+      <DependentUpon>FrmRangoAcumula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\FrmRptAcomulaOro.resx">
+      <DependentUpon>FrmRptAcomulaOro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlata.resx">
+      <DependentUpon>FrmRptAcomulaPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\FrmRptAcomulaPlatino.resx">
+      <DependentUpon>FrmRptAcomulaPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\RptOroAcumula.rdlc" />
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\RptPlataAcumula.rdlc" />
+    <EmbeddedResource Include="Reportes\Acumulado\Rango\RptPlatinoAcumula.rdlc" />
+    <EmbeddedResource Include="Reportes\Acumulado\RptAcomula.rdlc" />
+    <EmbeddedResource Include="Reportes\AcumXcliente\FrmAcumXcliente.resx">
+      <DependentUpon>FrmAcumXcliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\AcumXcliente\FrmBuscaProv.resx">
+      <DependentUpon>FrmBuscaProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\AcumXcliente\FrmCajaAcumXcliente.resx">
+      <DependentUpon>FrmCajaAcumXcliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\AcumXcliente\FrmCajaBuscaProv.resx">
+      <DependentUpon>FrmCajaBuscaProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\AcumXcliente\FrmRptAcumCliente.resx">
+      <DependentUpon>FrmRptAcumCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\AcumXcliente\RptAcumCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\Clientes\ClientesCedula\FrmClienteCedula.resx">
+      <DependentUpon>FrmClienteCedula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Clientes\ClientesCedula\RptClienteCedula.rdlc" />
+    <EmbeddedResource Include="Reportes\Clientes\FrmListaClientes.resx">
+      <DependentUpon>FrmListaClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Clientes\RptListaClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\ComprasConsecutivo\FrmRptCompConsecutivo.resx">
+      <DependentUpon>FrmRptCompConsecutivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ComprasConsecutivo\RptCompConsecutivo.rdlc" />
+    <EmbeddedResource Include="Reportes\Declara\Documento_Origen.resx">
+      <DependentUpon>Documento_Origen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Declara\FrmDecCompras.resx">
+      <DependentUpon>FrmDecCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Declara\FrmNuevoDeclara.resx">
+      <DependentUpon>FrmNuevoDeclara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Declara\Documento_Origen.rdlc" />
+    <EmbeddedResource Include="Reportes\Declara\RptDecCompras.rdlc" />
+    <EmbeddedResource Include="Reportes\Declara\RptNuevoANM.rdlc" />
+    <EmbeddedResource Include="Reportes\Egreso\Documento_Egreso.resx">
+      <DependentUpon>Documento_Egreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Egreso\Documento_Egreso.rdlc" />
+    <EmbeddedResource Include="Reportes\Equivalente\Documento_Equivalente.resx">
+      <DependentUpon>Documento_Equivalente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Equivalente\FrmEquivalenteDec.resx">
+      <DependentUpon>FrmEquivalenteDec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Equivalente\FrmNuevoEquivalente.resx">
+      <DependentUpon>FrmNuevoEquivalente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Egreso\FrmRptEgresoEquivalente.resx">
+      <DependentUpon>FrmRptEgresoEquivalente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Egreso\RptEgresoEquivale.rdlc" />
+    <EmbeddedResource Include="Reportes\Equivalente\Documento_Equivalente.rdlc" />
+    <EmbeddedResource Include="Reportes\Equivalente\RptNuevoEquivalente.rdlc" />
+    <EmbeddedResource Include="Reportes\FrmProveeMenu.resx">
+      <DependentUpon>FrmProveeMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReportes.resx">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ComprasConsecutivo\FrmComprasConsecutivo.resx">
+      <DependentUpon>FrmComprasConsecutivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MaterialDisponible\FrmDisponible.resx">
+      <DependentUpon>FrmDisponible.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MaterialDisponible\FrmFechaDisponible.resx">
+      <DependentUpon>FrmFechaDisponible.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MaterialDisponible\RptDisponible.rdlc" />
+    <EmbeddedResource Include="Reportes\MaterialDisponible\RptZonaDpto\FrmRptFullZonasDpto.resx">
+      <DependentUpon>FrmRptFullZonasDpto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MaterialDisponible\RptZonaDpto\FrmZonasDpto.resx">
+      <DependentUpon>FrmZonasDpto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MaterialDisponible\RptZonaDpto\RptFullZonasDpto.rdlc" />
+    <EmbeddedResource Include="Reportes\MaterialDisponible\RptZonaDpto\RptZonasDpto.rdlc" />
+    <EmbeddedResource Include="Reportes\Proveedores\FrmFechasXproveedores.resx">
+      <DependentUpon>FrmFechasXproveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Proveedores\FrmRptFechaProv.resx">
+      <DependentUpon>FrmRptFechaProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Regalias\FrmConsultaCompOroPlata.resx">
+      <DependentUpon>FrmConsultaCompOroPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Regalias\FrmLiquidaCompraOroPlata.resx">
+      <DependentUpon>FrmLiquidaCompraOroPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Regalias\FrmRangoFechasRegalias.resx">
+      <DependentUpon>FrmRangoFechasRegalias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Regalias\FrmRpt_Regalias.resx">
+      <DependentUpon>FrmRpt_Regalias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Regalias\RptLiquidaOroPlata.rdlc" />
+    <EmbeddedResource Include="Reportes\Regalias\RptRegaliasFechas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmCajaSeleDeclaraMineraReimp.resx">
+      <DependentUpon>FrmCajaSeleDeclaraMineraReimp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReimpDeclara.resx">
+      <DependentUpon>FrmReimpDeclara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmReImpNuevoDeclara.resx">
+      <DependentUpon>FrmReImpNuevoDeclara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmRimpANMTrim.resx">
+      <DependentUpon>FrmRimpANMTrim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\FrmSeleDeclaraMineraReimp.resx">
+      <DependentUpon>FrmSeleDeclaraMineraReimp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\RptDeclaraReimprime.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\RptReImpNuevoANM.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\DeclaraMinera\RptRimpANMTrim.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Egreso\FrmReimprimeEgreso.resx">
+      <DependentUpon>FrmReimprimeEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Egreso\FrmSeleEgresoReimp.resx">
+      <DependentUpon>FrmSeleEgresoReimp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Egreso\RptReimprimeEgreso.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Equivalente\FrmNuevoReimpEqui.resx">
+      <DependentUpon>FrmNuevoReimpEqui.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Equivalente\FrmSeleEquivaReim.resx">
+      <DependentUpon>FrmSeleEquivaReim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Equivalente\RptNuevoReimpEqui.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\FrmEscojeReimpDocus.resx">
+      <DependentUpon>FrmEscojeReimpDocus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Vincula\FrmReimprimeVincula.resx">
+      <DependentUpon>FrmReimprimeVincula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Vincula\FrmSeleReimpVincula.resx">
+      <DependentUpon>FrmSeleReimpVincula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Vincula\RptReimpVincula.rdlc" />
+    <EmbeddedResource Include="Reportes\Retefuente\FrmRptCertiRF.resx">
+      <DependentUpon>FrmRptCertiRF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Retefuente\FrmSeleCertificadoRF.resx">
+      <DependentUpon>FrmSeleCertificadoRF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Retefuente\RptCertiRF.rdlc" />
+    <EmbeddedResource Include="Reportes\Tasas\TasaDiaria\FrmRangoTasasDiarias.resx">
+      <DependentUpon>FrmRangoTasasDiarias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Tasas\TasaDiaria\FrmRptTasaDiaria.resx">
+      <DependentUpon>FrmRptTasaDiaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Tasas\TasaDiaria\RptTasaDiaria.rdlc" />
+    <EmbeddedResource Include="Reportes\Tasas\TasaMensual\FrmRangoTasMensual.resx">
+      <DependentUpon>FrmRangoTasMensual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Tasas\TasaMensual\FrmRptTasaMensual.resx">
+      <DependentUpon>FrmRptTasaMensual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Tasas\TasaMensual\RptTasaMensual.rdlc" />
+    <EmbeddedResource Include="Reportes\Vincular\FrmRptVincula.resx">
+      <DependentUpon>FrmRptVincula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Vincular\RptVinculacion.rdlc" />
+    <EmbeddedResource Include="Reportes\Zonas\FrmZonasAuto.resx">
+      <DependentUpon>FrmZonasAuto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Zonas\ReportZonas.rdlc" />
+    <EmbeddedResource Include="Secretaria\FrmSecretaria.resx">
+      <DependentUpon>FrmSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\FrmListasdeConsulta.resx">
+      <DependentUpon>FrmListasdeConsulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\FrmMenuTax.resx">
+      <DependentUpon>FrmMenuTax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Oro\FrmRegaliasOro.resx">
+      <DependentUpon>FrmRegaliasOro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Oro\FrmRetefuenteOro.resx">
+      <DependentUpon>FrmRetefuenteOro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\FrmTasaBaseDiaria.resx">
+      <DependentUpon>FrmTasaBaseDiaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Oro\FrmTasasOro.resx">
+      <DependentUpon>FrmTasasOro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Plata\FrmRegaliasPlata.resx">
+      <DependentUpon>FrmRegaliasPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Plata\FrmRetefuentePlata.resx">
+      <DependentUpon>FrmRetefuentePlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Plata\FrmTasasPlata.resx">
+      <DependentUpon>FrmTasasPlata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Platino\FrmRegaliasPlatino.resx">
+      <DependentUpon>FrmRegaliasPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Platino\FrmRetefuentePlatino.resx">
+      <DependentUpon>FrmRetefuentePlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TasasDiarias\Platino\FrmTasaPlatino.resx">
+      <DependentUpon>FrmTasaPlatino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIAF\FrmReporteUIAF.resx">
+      <DependentUpon>FrmReporteUIAF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIAF\FrmSeleRptUiaf.resx">
+      <DependentUpon>FrmSeleRptUiaf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIAF\ImprimeRptUiaf\FrmUIAFrpt.resx">
+      <DependentUpon>FrmUIAFrpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIAF\ImprimeRptUiaf\RptUIAF.rdlc" />
+    <EmbeddedResource Include="ValidaEmpresa\FrmValidaEmp.resx">
+      <DependentUpon>FrmValidaEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Compras\FrmBuscaEmp.resx">
+      <DependentUpon>FrmBuscaEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Compras\FrmCompraTraslado.resx">
+      <DependentUpon>FrmCompraTraslado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Compras\Reportes\FrmNuevaCompra.resx">
+      <DependentUpon>FrmNuevaCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Compras\Reportes\RptNuevaCompra.rdlc" />
+    <EmbeddedResource Include="Ventas\FrmVentas.resx">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\VentaFundi\FrmBuscaVenta.resx">
+      <DependentUpon>FrmBuscaVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\VentaFundi\FrmVentaGold.resx">
+      <DependentUpon>FrmVentaGold.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AppMinerGold_1_TemporaryKey.pfx" />
+    <None Include="AppMinerGold_2_TemporaryKey.pfx" />
+    <None Include="AppMinerGold_3_TemporaryKey.pfx" />
+    <None Include="AppMinerGold_TemporaryKey.pfx" />
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet.xsc">
+      <DependentUpon>DbmineroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet.xss">
+      <DependentUpon>DbmineroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet1.xsc">
+      <DependentUpon>DbmineroDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet1.xss">
+      <DependentUpon>DbmineroDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet10.xsc">
+      <DependentUpon>DbmineroDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet10.xss">
+      <DependentUpon>DbmineroDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet11.xsc">
+      <DependentUpon>DbmineroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet11.xss">
+      <DependentUpon>DbmineroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet12.xsc">
+      <DependentUpon>DbmineroDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet12.xss">
+      <DependentUpon>DbmineroDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet13.xsc">
+      <DependentUpon>DbmineroDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet13.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet13.xss">
+      <DependentUpon>DbmineroDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet14.xsc">
+      <DependentUpon>DbmineroDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet14.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet14.xss">
+      <DependentUpon>DbmineroDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet15.xsc">
+      <DependentUpon>DbmineroDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet15.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet15.xss">
+      <DependentUpon>DbmineroDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet16.xsc">
+      <DependentUpon>DbmineroDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet16.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet16.xss">
+      <DependentUpon>DbmineroDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet17.xsc">
+      <DependentUpon>DbmineroDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet17.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet17.xss">
+      <DependentUpon>DbmineroDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet18.xsc">
+      <DependentUpon>DbmineroDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet18.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet18.xss">
+      <DependentUpon>DbmineroDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet19.xsc">
+      <DependentUpon>DbmineroDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet19.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet19.xss">
+      <DependentUpon>DbmineroDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet2.xsc">
+      <DependentUpon>DbmineroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet2.xss">
+      <DependentUpon>DbmineroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet20.xsc">
+      <DependentUpon>DbmineroDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet20.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet20.xss">
+      <DependentUpon>DbmineroDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet21.xsc">
+      <DependentUpon>DbmineroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet21.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet21.xss">
+      <DependentUpon>DbmineroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet22.xsc">
+      <DependentUpon>DbmineroDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet22.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet22.xss">
+      <DependentUpon>DbmineroDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet23.xsc">
+      <DependentUpon>DbmineroDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet23.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet23.xss">
+      <DependentUpon>DbmineroDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet24.xsc">
+      <DependentUpon>DbmineroDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet24.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet24.xss">
+      <DependentUpon>DbmineroDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet25.xsc">
+      <DependentUpon>DbmineroDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet25.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet25.xss">
+      <DependentUpon>DbmineroDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet26.xsc">
+      <DependentUpon>DbmineroDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet26.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet26.xss">
+      <DependentUpon>DbmineroDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet27.xsc">
+      <DependentUpon>DbmineroDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet27.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet27.xss">
+      <DependentUpon>DbmineroDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet28.xsc">
+      <DependentUpon>DbmineroDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet28.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet28.xss">
+      <DependentUpon>DbmineroDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet29.xsc">
+      <DependentUpon>DbmineroDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet29.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet29.xss">
+      <DependentUpon>DbmineroDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet3.xsc">
+      <DependentUpon>DbmineroDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet3.xss">
+      <DependentUpon>DbmineroDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet30.xsc">
+      <DependentUpon>DbmineroDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet30.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet30.xss">
+      <DependentUpon>DbmineroDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet31.xsc">
+      <DependentUpon>DbmineroDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet31.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet31.xss">
+      <DependentUpon>DbmineroDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet32.xsc">
+      <DependentUpon>DbmineroDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet32.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet32.xss">
+      <DependentUpon>DbmineroDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet33.xsc">
+      <DependentUpon>DbmineroDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet33.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet33.xss">
+      <DependentUpon>DbmineroDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet34.xsc">
+      <DependentUpon>DbmineroDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet34.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet34.xss">
+      <DependentUpon>DbmineroDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet35.xsc">
+      <DependentUpon>DbmineroDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet35.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet35.xss">
+      <DependentUpon>DbmineroDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet36.xsc">
+      <DependentUpon>DbmineroDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet36.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet36.xss">
+      <DependentUpon>DbmineroDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet37.xsc">
+      <DependentUpon>DbmineroDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet37.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet37.xss">
+      <DependentUpon>DbmineroDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet38.xsc">
+      <DependentUpon>DbmineroDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet38.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet38.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DbmineroDataSet38.xss">
+      <DependentUpon>DbmineroDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet39.xsc">
+      <DependentUpon>DbmineroDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet39.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet39.xss">
+      <DependentUpon>DbmineroDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet4.xsc">
+      <DependentUpon>DbmineroDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet4.xss">
+      <DependentUpon>DbmineroDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet5.xsc">
+      <DependentUpon>DbmineroDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet5.xss">
+      <DependentUpon>DbmineroDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet6.xsc">
+      <DependentUpon>DbmineroDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet6.xss">
+      <DependentUpon>DbmineroDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet7.xsc">
+      <DependentUpon>DbmineroDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet7.xss">
+      <DependentUpon>DbmineroDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet8.xsc">
+      <DependentUpon>DbmineroDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet8.xss">
+      <DependentUpon>DbmineroDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet9.xsc">
+      <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DbmineroDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbmineroDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbmineroDataSet9.xss">
+      <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet29TableAdapters.DeclaraTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet29TableAdapters.Empresa1ClienteTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet29TableAdapters.EmpresaTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet29TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet29TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.DeclaraTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.Empresa1ClienteTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.EmpresaTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.QueriesTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet34TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet35TableAdapters.DeclaraTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet35TableAdapters.Empresa1ClienteTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet35TableAdapters.EmpresaTableAdapter.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet35TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSet35TableAdapters.TableAdapterManager.datasource" />
+    <None Include="My Project\DataSources\AppMinerGold.DbmineroDataSetTableAdapters.Empresa1ClienteTableAdapter.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CM.ico" />
+    <None Include="Imagenes\Foto.png" />
+    <None Include="Imagenes\FotoOK.png" />
+    <None Include="Imagenes\FotoX.jpg" />
+    <None Include="Imagenes\huella.png" />
+    <None Include="Imagenes\huellaX.png" />
+    <Content Include="Imagenes\Icono\jcfc.ico" />
+    <Content Include="Imagenes\Logo.jpg" />
+    <Content Include="jcfc.ico" />
+    <Content Include="logoExport.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
