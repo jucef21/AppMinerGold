@@ -204,7 +204,7 @@ Partial Class FrmLogin
         Me.LinkLabel2.Size = New System.Drawing.Size(232, 16)
         Me.LinkLabel2.TabIndex = 1
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "jucef21@gmail.com - Rev-0.1-2025-Sil"
+        Me.LinkLabel2.Text = "jucef21@gmail.com - Rev-0.1-2026-Sil"
         '
         'Panel1
         '

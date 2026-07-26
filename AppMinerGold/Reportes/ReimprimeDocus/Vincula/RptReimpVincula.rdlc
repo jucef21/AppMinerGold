@@ -1607,7 +1607,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>11.01262cm</Top>
+            <Top>16.60062cm</Top>
             <Left>0.22077cm</Left>
             <Height>0.49417cm</Height>
             <Width>17.49664cm</Width>
@@ -1645,7 +1645,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>14.95167cm</Top>
+            <Top>20.53967cm</Top>
             <Left>0.24489cm</Left>
             <Height>0.49417cm</Height>
             <Width>17.47252cm</Width>
@@ -1904,7 +1904,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>11.67423cm</Top>
+            <Top>17.26223cm</Top>
             <Left>0.32263cm</Left>
             <Height>0.6cm</Height>
             <Width>0.8854cm</Width>
@@ -1942,7 +1942,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>11.68318cm</Top>
+            <Top>17.27118cm</Top>
             <Left>5.39236cm</Left>
             <Height>0.45684cm</Height>
             <Width>3.33916cm</Width>
@@ -1980,7 +1980,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>11.7186cm</Top>
+            <Top>17.3066cm</Top>
             <Left>9.41812cm</Left>
             <Height>0.6cm</Height>
             <Width>1.11956cm</Width>
@@ -1997,7 +1997,7 @@
           </Textbox>
           <Rectangle Name="Rectangle4">
             <KeepTogether>true</KeepTogether>
-            <Top>11.7186cm</Top>
+            <Top>17.3066cm</Top>
             <Left>1.31387cm</Left>
             <Height>1.16756cm</Height>
             <Width>3.85177cm</Width>
@@ -2010,7 +2010,7 @@
           </Rectangle>
           <Rectangle Name="Rectangle5">
             <KeepTogether>true</KeepTogether>
-            <Top>12.29526cm</Top>
+            <Top>17.88326cm</Top>
             <Left>5.39236cm</Left>
             <Height>0.5909cm</Height>
             <Width>3.33916cm</Width>
@@ -2023,7 +2023,7 @@
           </Rectangle>
           <Rectangle Name="Rectangle6">
             <KeepTogether>true</KeepTogether>
-            <Top>11.67423cm</Top>
+            <Top>17.26223cm</Top>
             <Left>10.67879cm</Left>
             <Height>2.4643cm</Height>
             <Width>1.83449cm</Width>
@@ -2077,7 +2077,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>11.70174cm</Top>
+            <Top>17.28974cm</Top>
             <Left>14.86742cm</Left>
             <Height>2.90245cm</Height>
             <Width>2.79104cm</Width>
@@ -2111,7 +2111,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>11.7186cm</Top>
+            <Top>17.3066cm</Top>
             <Left>12.68967cm</Left>
             <Height>0.89104cm</Height>
             <Width>1.89082cm</Width>
@@ -2149,7 +2149,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>14.98723cm</Top>
+            <Top>20.57523cm</Top>
             <Left>0.274cm</Left>
             <Height>0.6cm</Height>
             <Width>3.04616cm</Width>
@@ -2166,7 +2166,7 @@
           </Textbox>
           <Rectangle Name="Rectangle7">
             <KeepTogether>true</KeepTogether>
-            <Top>15.60502cm</Top>
+            <Top>21.19302cm</Top>
             <Left>3.49656cm</Left>
             <Height>0.6cm</Height>
             <Width>14.22085cm</Width>
@@ -2200,7 +2200,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>16.44083cm</Top>
+            <Top>22.02883cm</Top>
             <Left>0.32163cm</Left>
             <Height>0.44125cm</Height>
             <Width>4.69338cm</Width>
@@ -2217,7 +2217,7 @@
           </Textbox>
           <Rectangle Name="Rectangle11">
             <KeepTogether>true</KeepTogether>
-            <Top>17.14666cm</Top>
+            <Top>22.73466cm</Top>
             <Left>0.29958cm</Left>
             <Height>0.47929cm</Height>
             <Width>4.71543cm</Width>
@@ -2251,7 +2251,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>16.41316cm</Top>
+            <Top>22.00116cm</Top>
             <Left>5.39236cm</Left>
             <Height>0.44125cm</Height>
             <Width>4.63511cm</Width>
@@ -2268,7 +2268,7 @@
           </Textbox>
           <Rectangle Name="Rectangle12">
             <KeepTogether>true</KeepTogether>
-            <Top>17.14369cm</Top>
+            <Top>22.73169cm</Top>
             <Left>5.29559cm</Left>
             <Height>0.48227cm</Height>
             <Width>4.73188cm</Width>
@@ -2302,7 +2302,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>16.34777cm</Top>
+            <Top>21.93577cm</Top>
             <Left>13.19803cm</Left>
             <Height>0.50664cm</Height>
             <Width>4.45763cm</Width>
@@ -2319,7 +2319,7 @@
           </Textbox>
           <Rectangle Name="Rectangle13">
             <KeepTogether>true</KeepTogether>
-            <Top>17.18955cm</Top>
+            <Top>22.77755cm</Top>
             <Left>13.19803cm</Left>
             <Height>0.4364cm</Height>
             <Width>4.51938cm</Width>
@@ -2537,76 +2537,179 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox77">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>DECLARACIÓN DE INFORMACIÓN TRIBUTARIA</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Toda persona natural una vez supere los montos establecidos en los artículos 591, 592 y 437 parágrafo 3 del estatuto tributario, esta condicionado a presentar y dar cumplimiento a las obligaciones tributarias consignadas en la norma ante la entidad correspondiente, es de aclarar que la supervición control y cumplimiento de este proceso recae exclusivamente sobre quien realice direcatamente la venta.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Por lo tanto la empresa queda excenta de cualquier tipo de responsabilidad que este ligada a la obligación </Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>tributaria de un tercero.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox76</rd:DefaultName>
+            <Top>11.05638cm</Top>
+            <Left>0.22077cm</Left>
+            <Height>2.41722cm</Height>
+            <Width>17.47019cm</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox76">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>DECLARACIÓN DE ORIGEN DE FONDOS</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Declaro que estos recursos no provienen de ninguna actividad ilícita de las contempladas en  el  Código  Penal  Colombiano  o en cualquier norma que lo modifique o adicione como ilícita  y  que  ponemos  el  mayor  empeño  en  evitar que mi actividad se convierta en instrumento de lavado de activos y/o canalización  de  recursos  hacia la realización de actividades terroristas, de  manera  voluntaria  y  dando  certeza  de  que todo lo aquí consignado es cierto, realizo  la siguiente declaración en cumplimiento a lo señalado al respecto en la Circular Externa No.007 de 1996 expedida por la Superintendencia Bancaria, en el Estatuto Orgánico  del  Sistema  Financiero (Decreto 663 de 1993), Ley 190 de 1995 “Estatuto Anticorrupción” y demás normas legales concordantes.</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontFamily>Courier New</FontFamily>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                      <Color>#000000</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <LeftIndent>0cm</LeftIndent>
+                <RightIndent>0cm</RightIndent>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                  <LineHeight>12pt</LineHeight>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox76</rd:DefaultName>
+            <Top>13.61741cm</Top>
+            <Left>0.19399cm</Left>
+            <Height>2.83104cm</Height>
+            <Width>17.47019cm</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>7.06462in</Height>
+        <Height>9.33545in</Height>
         <Style />
       </Body>
       <Width>7.07931in</Width>
       <Page>
         <PageFooter>
-          <Height>6.61459cm</Height>
+          <Height>1.64042cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox76">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>DECLARACIÓN DE ORIGEN DE FONDOS</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Declaro que estos recursos no provienen de ninguna actividad ilícita de las contempladas en  el  Código  Penal  Colombiano  o en cualquier norma que lo modifique o adicione como ilícita  y  que  ponemos  el  mayor  empeño  en  evitar que mi actividad se convierta en instrumento de lavado de activos y/o canalización  de  recursos  hacia la realización de actividades terroristas, de  manera  voluntaria  y  dando  certeza  de  que todo lo aquí consignado es cierto, realizo  la siguiente declaración en cumplimiento a lo señalado al respecto en la Circular Externa No.007 de 1996 expedida por la Superintendencia Bancaria, en el Estatuto Orgánico  del  Sistema  Financiero (Decreto 663 de 1993), Ley 190 de 1995 “Estatuto Anticorrupción” y demás normas legales concordantes.</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>7pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox76</rd:DefaultName>
-              <Top>2.70214cm</Top>
-              <Left>0.24722cm</Left>
-              <Height>2.83104cm</Height>
-              <Width>17.47019cm</Width>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox78">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2630,11 +2733,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox78</rd:DefaultName>
-              <Top>5.70428cm</Top>
+              <Top>0.38615cm</Top>
               <Left>0.24722cm</Left>
               <Height>0.6cm</Height>
               <Width>3.09973cm</Width>
-              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2668,116 +2770,14 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox79</rd:DefaultName>
-              <Top>5.70428cm</Top>
+              <Top>0.38615cm</Top>
               <Left>3.45807cm</Left>
               <Height>0.6cm</Height>
               <Width>4.88125cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox77">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>DECLARACIÓN DE INFORMACIÓN TRIBUTARIA</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Toda persona natural una vez supere los montos establecidos en los artículos 591, 592 y 437 parágrafo 3 del estatuto tributario, esta condicionado a presentar y dar cumplimiento a las obligaciones tributarias consignadas en la norma ante la entidad correspondiente, es de aclarar que la supervición control y cumplimiento de este proceso recae exclusivamente sobre quien realice direcatamente la venta.</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>7pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                        <TextDecoration>None</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Por lo tanto la empresa queda excenta de cualquier tipo de responsabilidad que este ligada a la obligación </Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>7pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>tributaria de un tercero.</Value>
-                      <Style>
-                        <FontStyle>Normal</FontStyle>
-                        <FontFamily>Courier New</FontFamily>
-                        <FontSize>7pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
-                        <Color>#000000</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <LeftIndent>0cm</LeftIndent>
-                  <RightIndent>0cm</RightIndent>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                    <LineHeight>12pt</LineHeight>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox76</rd:DefaultName>
-              <Top>0.14111cm</Top>
-              <Left>0.274cm</Left>
-              <Height>2.41722cm</Height>
-              <Width>17.47019cm</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Solid</Style>
                 </Border>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>

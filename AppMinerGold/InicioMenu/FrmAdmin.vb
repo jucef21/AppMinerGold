@@ -1,4 +1,7 @@
 ﻿Imports System.Runtime.InteropServices
+Imports System.Threading
+Imports Microsoft.Web.WebView2.Core
+Imports System.IO
 
 Public Class FrmAdmin
 
@@ -39,7 +42,7 @@ Public Class FrmAdmin
     Private m_ChildFormNumber As Integer
 
     'CARGUE DEL FORMULARIO PRINCIPAL
-    Private Sub FrmAdminNuevo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Async Sub FrmAdminNuevo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
             'MUESTRA EL ESTADO DEL CURSOR
             Me.Cursor = Cursors.WaitCursor
@@ -63,15 +66,96 @@ Public Class FrmAdmin
             'cierro la conexion
             Conectar.conn.Close()
 
+            ' Creamos una carpeta temporal para que el navegador no falle por permisos
+            Dim userPath As String = Path.Combine(Path.GetTempPath(), "JucefSoftware_Trading")
+            If Not Directory.Exists(userPath) Then Directory.CreateDirectory(userPath)
+
+            Dim env = Await CoreWebView2Environment.CreateAsync(Nothing, userPath)
+
+            ' Esperamos la inicialización
+            Await wbMonitor.EnsureCoreWebView2Async(env)
+
+            ' Configuraciones de seguridad y ejecución
+            wbMonitor.CoreWebView2.Settings.IsScriptEnabled = True
+            wbMonitor.CoreWebView2.Settings.AreDefaultContextMenusEnabled = False
+            wbMonitor.CoreWebView2.Settings.AreDevToolsEnabled = True
+
+            ' --- EL CONTENIDO HTML ---
+            'Dim htmlMetales As String = "
+            '    <!DOCTYPE html>
+            '    <html>
+            '    <head>
+            '        <meta charset='UTF-8'>
+            '        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css'>
+            '        <style>
+            '            body { background-color: #f4f6f9; margin: 10px; overflow: hidden; }
+            '            .card { border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+            '            .row { display: flex; }
+            '            .col-4 { width: 33.33%; padding: 5px; }
+            '        </style>
+            '    </head>
+            '    <body>
+            '        <div class='card card-outline card-dark'>
+            '            <div class='card-header'>
+            '                <h3 class='card-title'>Monitor en Tiempo Real (Autorefresco cada 5 min)</h3>
+            '            </div>
+            '            <div class='card-body'>
+            '                <div class='row'>
+            '                    <div class='col-4'>
+            '                        <h5 class='text-center text-warning'>ORO</h5>
+            '                        <div id='tv_oro' style='height: 300px;'></div>
+            '                    </div>
+            '                    <div class='col-4'>
+            '                        <h5 class='text-center text-secondary'>PLATA</h5>
+            '                        <div id='tv_plata' style='height: 300px;'></div>
+            '                    </div>
+            '                    <div class='col-4'>
+            '                        <h5 class='text-center text-info'>PLATINO</h5>
+            '                        <div id='tv_platino' style='height: 300px;'></div>
+            '                    </div>
+            '                </div>
+            '            </div>
+            '        </div>
+
+            '        <script type='text/javascript' src='https://s3.tradingview.com/tv.js'></script>
+            '        <script>
+            '            const config = { 'autosize': true, 'interval': '60', 'theme': 'light', 'style': '3', 'locale': 'es' };
+
+            '            function cargarGraficos() {
+            '                if (typeof TradingView !== 'undefined') {
+            '                    // Renderizar Oro
+            '                    new TradingView.widget({ ...config, 'symbol': 'OANDA:XAUUSD', 'container_id': 'tv_oro' });
+            '                    // Renderizar Plata
+            '                    new TradingView.widget({ ...config, 'symbol': 'OANDA:XAGUSD', 'container_id': 'tv_plata' });
+            '                    // Renderizar Platino
+            '                    new TradingView.widget({ ...config, 'symbol': 'OANDA:XPTUSD', 'container_id': 'tv_platino' });
+
+            '                    console.log('Gráficos actualizados: ' + new Date().toLocaleTimeString());
+            '                }
+            '            }
+
+            '            // 1. Carga inicial
+            '            window.onload = cargarGraficos;
+
+            '            // 2. Configurar autorefresco cada 5 minutos (300,000 milisegundos)
+            '            // Esto refresca los widgets sin recargar la página blanca ni el formulario de VB
+            '            setInterval(cargarGraficos, 300000); 
+            '        </script>
+            '    </body>
+            '    </html>"
+
+            '' Cargamos el HTML
+            'wbMonitor.CoreWebView2.NavigateToString(htmlMetales)
+
         Catch ex As Exception
-            ' Se ha producido un error
-            MessageBox.Show(ex.Message)
-            'ACTUALIZAR CURSOR 
+            MessageBox.Show("Error en Monitor: " & ex.Message)
             Me.Cursor = Cursors.Default
         Finally
             'ACTUALIZAR CURSOR 
             Me.Cursor = Cursors.Default
         End Try
+
+
 
     End Sub
 

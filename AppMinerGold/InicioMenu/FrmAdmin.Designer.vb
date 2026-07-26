@@ -54,11 +54,13 @@ Partial Class FrmAdmin
         Me.TmOcultar = New System.Windows.Forms.Timer(Me.components)
         Me.TmMostrar = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.wbMonitor = New Microsoft.Web.WebView2.WinForms.WebView2()
         Me.PanelBarraTitulo.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContenedor.SuspendLayout()
         Me.PanelEstado.SuspendLayout()
+        CType(Me.wbMonitor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelBarraTitulo
@@ -359,6 +361,7 @@ Partial Class FrmAdmin
         '
         Me.PanelContenedor.BackColor = System.Drawing.Color.White
         Me.PanelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PanelContenedor.Controls.Add(Me.wbMonitor)
         Me.PanelContenedor.Controls.Add(Me.LblFecha)
         Me.PanelContenedor.Controls.Add(Me.LblHora)
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
@@ -448,6 +451,17 @@ Partial Class FrmAdmin
         '
         Me.Timer1.Enabled = True
         '
+        'wbMonitor
+        '
+        Me.wbMonitor.AllowExternalDrop = True
+        Me.wbMonitor.CreationProperties = Nothing
+        Me.wbMonitor.DefaultBackgroundColor = System.Drawing.Color.White
+        Me.wbMonitor.Location = New System.Drawing.Point(234, 145)
+        Me.wbMonitor.Name = "wbMonitor"
+        Me.wbMonitor.Size = New System.Drawing.Size(876, 471)
+        Me.wbMonitor.TabIndex = 2
+        Me.wbMonitor.ZoomFactor = 1.0R
+        '
         'FrmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -471,6 +485,7 @@ Partial Class FrmAdmin
         Me.PanelContenedor.PerformLayout()
         Me.PanelEstado.ResumeLayout(False)
         Me.PanelEstado.PerformLayout()
+        CType(Me.wbMonitor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -505,4 +520,5 @@ Partial Class FrmAdmin
     Friend WithEvents BtnAyudas As Button
     Friend WithEvents BtnCopiaSeg As Button
     Friend WithEvents BtnReportes As Button
+    Friend WithEvents wbMonitor As Microsoft.Web.WebView2.WinForms.WebView2
 End Class

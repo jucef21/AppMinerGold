@@ -45,7 +45,7 @@ Partial Class FrmSplash
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(383, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Derechos Reservados de Autor@Jucef, Software 2.019-2.025, Rev-08-2025-Sil"
+        Me.Label1.Text = "Derechos Reservados de Autor@Jucef, Software 2.019-2.026, Rev-08-2026-Sil"
         '
         'ProgressBar1
         '
