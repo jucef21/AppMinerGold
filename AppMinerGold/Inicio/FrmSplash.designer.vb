@@ -43,9 +43,9 @@ Partial Class FrmSplash
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(20, 174)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(383, 13)
+        Me.Label1.Size = New System.Drawing.Size(369, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Derechos Reservados de Autor@Jucef, Software 2.019-2.026, Rev-08-2026-Sil"
+        Me.Label1.Text = "Derechos Reservados de Autor@Jucef, Software 2.019-2.026, Rev-09-2026"
         '
         'ProgressBar1
         '

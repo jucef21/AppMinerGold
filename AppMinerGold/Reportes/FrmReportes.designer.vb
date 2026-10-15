@@ -27,6 +27,7 @@ Partial Class FrmReportes
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnOroPlata = New System.Windows.Forms.Button()
         Me.BtnConsultaComp = New System.Windows.Forms.Button()
         Me.BtnUiaf = New System.Windows.Forms.Button()
         Me.BtnCertiRF = New System.Windows.Forms.Button()
@@ -43,7 +44,7 @@ Partial Class FrmReportes
         Me.BtnX = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.BtnOroPlata = New System.Windows.Forms.Button()
+        Me.BtnConta = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -86,6 +87,7 @@ Partial Class FrmReportes
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.BtnConta)
         Me.Panel2.Controls.Add(Me.BtnOroPlata)
         Me.Panel2.Controls.Add(Me.BtnConsultaComp)
         Me.Panel2.Controls.Add(Me.BtnUiaf)
@@ -101,6 +103,17 @@ Partial Class FrmReportes
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(475, 325)
         Me.Panel2.TabIndex = 6
+        '
+        'BtnOroPlata
+        '
+        Me.BtnOroPlata.Image = CType(resources.GetObject("BtnOroPlata.Image"), System.Drawing.Image)
+        Me.BtnOroPlata.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnOroPlata.Location = New System.Drawing.Point(242, 275)
+        Me.BtnOroPlata.Name = "BtnOroPlata"
+        Me.BtnOroPlata.Size = New System.Drawing.Size(200, 40)
+        Me.BtnOroPlata.TabIndex = 11
+        Me.BtnOroPlata.Text = "Listado Compras Plata"
+        Me.BtnOroPlata.UseVisualStyleBackColor = True
         '
         'BtnConsultaComp
         '
@@ -294,16 +307,16 @@ Partial Class FrmReportes
         Me.Panel4.Size = New System.Drawing.Size(515, 500)
         Me.Panel4.TabIndex = 8
         '
-        'BtnOroPlata
+        'BtnConta
         '
-        Me.BtnOroPlata.Image = CType(resources.GetObject("BtnOroPlata.Image"), System.Drawing.Image)
-        Me.BtnOroPlata.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnOroPlata.Location = New System.Drawing.Point(242, 275)
-        Me.BtnOroPlata.Name = "BtnOroPlata"
-        Me.BtnOroPlata.Size = New System.Drawing.Size(200, 40)
-        Me.BtnOroPlata.TabIndex = 11
-        Me.BtnOroPlata.Text = "Listado Compras Plata"
-        Me.BtnOroPlata.UseVisualStyleBackColor = True
+        Me.BtnConta.Image = CType(resources.GetObject("BtnConta.Image"), System.Drawing.Image)
+        Me.BtnConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnConta.Location = New System.Drawing.Point(27, 275)
+        Me.BtnConta.Name = "BtnConta"
+        Me.BtnConta.Size = New System.Drawing.Size(200, 40)
+        Me.BtnConta.TabIndex = 12
+        Me.BtnConta.Text = "Listado Cotabilidad"
+        Me.BtnConta.UseVisualStyleBackColor = True
         '
         'FrmReportes
         '
@@ -356,4 +369,5 @@ Partial Class FrmReportes
     Friend WithEvents BtnUiaf As Button
     Friend WithEvents BtnConsultaComp As Button
     Friend WithEvents BtnOroPlata As Button
+    Friend WithEvents BtnConta As Button
 End Class

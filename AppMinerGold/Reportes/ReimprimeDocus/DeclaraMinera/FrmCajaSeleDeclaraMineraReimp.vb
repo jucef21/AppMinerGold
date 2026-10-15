@@ -83,7 +83,6 @@ Public Class FrmCajaSeleDeclaraMineraReimp
         conn.Open()
         Dim dt As New DataTable
         Dim ds As New DataSet
-        'Dim da As New OleDbDataAdapter("SELECT TOP 1 * FROM Clientes WHERE nom_cl LIKE '" & busqueda.Trim & "%' ORDER BY id DESC", conn)
         Dim da As New OleDbDataAdapter("SELECT * FROM Declara WHERE consecutivo LIKE '" & busqueda.Trim & "%' ORDER BY consecutivo ASC", conn)
         da.Fill(dt)
         dv.Table = ds.Tables("Declara")

@@ -73,7 +73,7 @@
     <ApplicationIcon>jcfc.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>07142FE8E41B5F41964E425DA194347EF60BA323</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1FA4AF53BCED9A088DD9005DCCBCF9DF8FE74850</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>
@@ -151,6 +151,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="DPFPCtlXWrapperNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPCtlXWrapperNET.dll</HintPath>
@@ -174,6 +177,9 @@
     <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\DigitalPersona\One Touch SDK\.NET\Bin\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.6, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.6\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\packages\MessagingToolkit.QRCode.dll</HintPath>
@@ -205,14 +211,14 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.170.1000.7\lib\net472\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3800.47, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3800.47\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.4129.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4129.50\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3800.47, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3800.47\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.4129.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4129.50\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3800.47, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3800.47\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.4129.50, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.4129.50\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
@@ -1013,6 +1019,19 @@
     <Compile Include="DbmineroDataSet9.vb">
       <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsContrato.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsContrato.vb">
+      <DependentUpon>DsContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsImagenEmpresa.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImagenEmpresa.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Evidencia\Fechas.Designer.vb">
       <DependentUpon>Fechas.vb</DependentUpon>
     </Compile>
@@ -1580,10 +1599,64 @@
     <Compile Include="Reportes\ComprasConsecutivo\FrmRptCompConsecutivo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Declara\Documento_Origen.Designer.vb">
-      <DependentUpon>Documento_Origen.vb</DependentUpon>
+    <Compile Include="Reportes\Contabilidad\30\FrmConta30.Designer.vb">
+      <DependentUpon>FrmConta30.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Declara\Documento_Origen.vb">
+    <Compile Include="Reportes\Contabilidad\30\FrmConta30.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmConta30Total.Designer.vb">
+      <DependentUpon>FrmConta30Total.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmConta30Total.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmConta70Total.Designer.vb">
+      <DependentUpon>FrmConta70Total.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmConta70Total.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmContabilidad.Designer.vb">
+      <DependentUpon>FrmContabilidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmContabilidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmSelectConta.Designer.vb">
+      <DependentUpon>FrmSelectConta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmSelectConta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmSelectConta30Total.Designer.vb">
+      <DependentUpon>FrmSelectConta30Total.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmSelectConta30Total.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmSelectConta70Total.Designer.vb">
+      <DependentUpon>FrmSelectConta70Total.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\70\FrmSelectConta70Total.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\FrmSelectReport.Designer.vb">
+      <DependentUpon>FrmSelectReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\FrmSelectReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmSelectConta30.Designer.vb">
+      <DependentUpon>FrmSelectConta30.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Contabilidad\30\FrmSelectConta30.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Declara\Declaración_de_produccion.Designer.vb">
+      <DependentUpon>Declaración_de_produccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Declara\Declaración_de_produccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Declara\FrmDecCompras.Designer.vb">
@@ -1626,6 +1699,102 @@
       <DependentUpon>FrmNuevoEquivalente.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Equivalente\FrmNuevoEquivalente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmActaEntrega.Designer.vb">
+      <DependentUpon>FrmActaEntrega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmActaEntrega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmCertificacion.Designer.vb">
+      <DependentUpon>FrmCertificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmCertificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmContrato.Designer.vb">
+      <DependentUpon>FrmContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmLiquidacion.Designer.vb">
+      <DependentUpon>FrmLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmPagare.Designer.vb">
+      <DependentUpon>FrmPagare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\InfoContratos\FrmPagare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Acta\FrmReimpActa.Designer.vb">
+      <DependentUpon>FrmReimpActa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Acta\FrmReimpActa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Acta\FrmSelectActa.Designer.vb">
+      <DependentUpon>FrmSelectActa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Acta\FrmSelectActa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Certificacion\FrmReimpCertificacion.Designer.vb">
+      <DependentUpon>FrmReimpCertificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Certificacion\FrmReimpCertificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Certificacion\FrmSelectCertificacion.Designer.vb">
+      <DependentUpon>FrmSelectCertificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Certificacion\FrmSelectCertificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Contrato\FrmReimpContrato.Designer.vb">
+      <DependentUpon>FrmReimpContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Contrato\FrmReimpContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Contrato\FrmSeleContrato.Designer.vb">
+      <DependentUpon>FrmSeleContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Contrato\FrmSeleContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Liquidacion\FrmActaLiquidacion.Designer.vb">
+      <DependentUpon>FrmActaLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Liquidacion\FrmActaLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Liquidacion\FrmSelectLiquidacion.Designer.vb">
+      <DependentUpon>FrmSelectLiquidacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Liquidacion\FrmSelectLiquidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Pagare\FrmReimpPagare.Designer.vb">
+      <DependentUpon>FrmReimpPagare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Pagare\FrmReimpPagare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Pagare\FrmSelectPagare.Designer.vb">
+      <DependentUpon>FrmSelectPagare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Pagare\FrmSelectPagare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Soporte\FrmSoporte.Designer.vb">
+      <DependentUpon>FrmSoporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Soporte\FrmSoporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\FrmProveeMenu.Designer.vb">
@@ -1766,6 +1935,12 @@
     <Compile Include="Reportes\ReimprimeDocus\FrmEscojeReimpDocus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Soporte\FrmSelectDocSoporte.Designer.vb">
+      <DependentUpon>FrmSelectDocSoporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReimprimeDocus\Soporte\FrmSelectDocSoporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\ReimprimeDocus\Vincula\FrmReimprimeVincula.Designer.vb">
       <DependentUpon>FrmReimprimeVincula.vb</DependentUpon>
     </Compile>
@@ -1790,6 +1965,12 @@
     <Compile Include="Reportes\Retefuente\FrmSeleCertificadoRF.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Soporte\FrmDocumentoSoporte.Designer.vb">
+      <DependentUpon>FrmDocumentoSoporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Soporte\FrmDocumentoSoporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Tasas\TasaDiaria\FrmRangoTasasDiarias.designer.vb">
       <DependentUpon>FrmRangoTasasDiarias.vb</DependentUpon>
     </Compile>
@@ -1812,6 +1993,18 @@
       <DependentUpon>FrmRptTasaMensual.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\Tasas\TasaMensual\FrmRptTasaMensual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\TodosReportes\FrmImpTodosReportes.Designer.vb">
+      <DependentUpon>FrmImpTodosReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TodosReportes\FrmImpTodosReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\TodosReportes\FrmSeleTodosReportes.Designer.vb">
+      <DependentUpon>FrmSeleTodosReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\TodosReportes\FrmSeleTodosReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Vincular\FrmRptVincula.Designer.vb">
@@ -2536,8 +2729,37 @@
       <DependentUpon>FrmRptCompConsecutivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ComprasConsecutivo\RptCompConsecutivo.rdlc" />
-    <EmbeddedResource Include="Reportes\Declara\Documento_Origen.resx">
-      <DependentUpon>Documento_Origen.vb</DependentUpon>
+    <EmbeddedResource Include="Reportes\Contabilidad\30\FrmConta30.resx">
+      <DependentUpon>FrmConta30.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\30\FrmConta30Total.resx">
+      <DependentUpon>FrmConta30Total.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\70\FrmConta70Total.resx">
+      <DependentUpon>FrmConta70Total.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\70\FrmContabilidad.resx">
+      <DependentUpon>FrmContabilidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\70\FrmSelectConta.resx">
+      <DependentUpon>FrmSelectConta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\30\FrmSelectConta30Total.resx">
+      <DependentUpon>FrmSelectConta30Total.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\70\FrmSelectConta70Total.resx">
+      <DependentUpon>FrmSelectConta70Total.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\FrmSelectReport.resx">
+      <DependentUpon>FrmSelectReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\30\FrmSelectConta30.resx">
+      <DependentUpon>FrmSelectConta30.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Contabilidad\30\Plantilla30.rdlc" />
+    <EmbeddedResource Include="Reportes\Contabilidad\70\Plantilla70.rdlc" />
+    <EmbeddedResource Include="Reportes\Declara\Declaración_de_produccion.resx">
+      <DependentUpon>Declaración_de_produccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Declara\FrmDecCompras.resx">
       <DependentUpon>FrmDecCompras.vb</DependentUpon>
@@ -2545,7 +2767,7 @@
     <EmbeddedResource Include="Reportes\Declara\FrmNuevoDeclara.resx">
       <DependentUpon>FrmNuevoDeclara.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Declara\Documento_Origen.rdlc" />
+    <EmbeddedResource Include="Reportes\Declara\Declaración_de_produccion.rdlc" />
     <EmbeddedResource Include="Reportes\Declara\RptDecCompras.rdlc" />
     <EmbeddedResource Include="Reportes\Declara\RptNuevoANM.rdlc" />
     <EmbeddedResource Include="Reportes\Egreso\Documento_Egreso.resx">
@@ -2566,7 +2788,61 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Egreso\RptEgresoEquivale.rdlc" />
     <EmbeddedResource Include="Reportes\Equivalente\Documento_Equivalente.rdlc" />
+    <EmbeddedResource Include="Reportes\InfoContratos\ActaEntrega.rdlc" />
+    <EmbeddedResource Include="Reportes\InfoContratos\CertificacionTri.rdlc" />
+    <EmbeddedResource Include="Reportes\InfoContratos\Contrato.rdlc" />
+    <EmbeddedResource Include="Reportes\InfoContratos\FrmActaEntrega.resx">
+      <DependentUpon>FrmActaEntrega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InfoContratos\FrmCertificacion.resx">
+      <DependentUpon>FrmCertificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InfoContratos\FrmContrato.resx">
+      <DependentUpon>FrmContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InfoContratos\FrmLiquidacion.resx">
+      <DependentUpon>FrmLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InfoContratos\FrmPagare.resx">
+      <DependentUpon>FrmPagare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\InfoContratos\Liquidacion.rdlc" />
+    <EmbeddedResource Include="Reportes\InfoContratos\Pagare.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Acta\FrmReimpActa.resx">
+      <DependentUpon>FrmReimpActa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Acta\FrmSelectActa.resx">
+      <DependentUpon>FrmSelectActa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Certificacion\FrmReimpCertificacion.resx">
+      <DependentUpon>FrmReimpCertificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Certificacion\FrmSelectCertificacion.resx">
+      <DependentUpon>FrmSelectCertificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Contrato\FrmReimpContrato.resx">
+      <DependentUpon>FrmReimpContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Contrato\FrmSeleContrato.resx">
+      <DependentUpon>FrmSeleContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Liquidacion\FrmActaLiquidacion.resx">
+      <DependentUpon>FrmActaLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Liquidacion\FrmSelectLiquidacion.resx">
+      <DependentUpon>FrmSelectLiquidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Pagare\FrmReimpPagare.resx">
+      <DependentUpon>FrmReimpPagare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Pagare\FrmSelectPagare.resx">
+      <DependentUpon>FrmSelectPagare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Soporte\FrmSoporte.resx">
+      <DependentUpon>FrmSoporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Equivalente\RptNuevoEquivalente.rdlc" />
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Soporte\RptSoporte.rdlc" />
     <EmbeddedResource Include="Reportes\FrmProveeMenu.resx">
       <DependentUpon>FrmProveeMenu.vb</DependentUpon>
     </EmbeddedResource>
@@ -2646,6 +2922,9 @@
     <EmbeddedResource Include="Reportes\ReimprimeDocus\FrmEscojeReimpDocus.resx">
       <DependentUpon>FrmEscojeReimpDocus.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReimprimeDocus\Soporte\FrmSelectDocSoporte.resx">
+      <DependentUpon>FrmSelectDocSoporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReimprimeDocus\Vincula\FrmReimprimeVincula.resx">
       <DependentUpon>FrmReimprimeVincula.vb</DependentUpon>
     </EmbeddedResource>
@@ -2660,6 +2939,9 @@
       <DependentUpon>FrmSeleCertificadoRF.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Retefuente\RptCertiRF.rdlc" />
+    <EmbeddedResource Include="Reportes\Soporte\FrmDocumentoSoporte.resx">
+      <DependentUpon>FrmDocumentoSoporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Tasas\TasaDiaria\FrmRangoTasasDiarias.resx">
       <DependentUpon>FrmRangoTasasDiarias.vb</DependentUpon>
     </EmbeddedResource>
@@ -2674,6 +2956,12 @@
       <DependentUpon>FrmRptTasaMensual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Tasas\TasaMensual\RptTasaMensual.rdlc" />
+    <EmbeddedResource Include="Reportes\TodosReportes\FrmImpTodosReportes.resx">
+      <DependentUpon>FrmImpTodosReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\TodosReportes\FrmSeleTodosReportes.resx">
+      <DependentUpon>FrmSeleTodosReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Vincular\FrmRptVincula.resx">
       <DependentUpon>FrmRptVincula.vb</DependentUpon>
     </EmbeddedResource>
@@ -3221,6 +3509,28 @@
     <None Include="DbmineroDataSet9.xss">
       <DependentUpon>DbmineroDataSet9.xsd</DependentUpon>
     </None>
+    <None Include="DsContrato.xsc">
+      <DependentUpon>DsContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DsContrato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsContrato.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DsContrato.xss">
+      <DependentUpon>DsContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DsImagenEmpresa.xsc">
+      <DependentUpon>DsImagenEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="DsImagenEmpresa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImagenEmpresa.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DsImagenEmpresa.xss">
+      <DependentUpon>DsImagenEmpresa.xsd</DependentUpon>
+    </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -3267,6 +3577,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CM.ico" />
+    <None Include="Resources\TamañoLogo.png" />
     <None Include="Imagenes\Foto.png" />
     <None Include="Imagenes\FotoOK.png" />
     <None Include="Imagenes\FotoX.jpg" />
@@ -3294,8 +3605,8 @@
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3800.47\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3800.47\build\Microsoft.Web.WebView2.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.170.1000.7\build\net472\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.4129.50\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.4129.50\build\Microsoft.Web.WebView2.targets'))" />
   </Target>
-  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3800.47\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3800.47\build\Microsoft.Web.WebView2.targets')" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.4129.50\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.4129.50\build\Microsoft.Web.WebView2.targets')" />
 </Project>

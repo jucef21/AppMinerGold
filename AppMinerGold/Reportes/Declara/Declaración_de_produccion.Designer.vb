@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Documento_Origen
+Partial Class Declaración_de_produccion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -100,7 +100,7 @@ Partial Class Documento_Origen
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource4)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "AppMinerGold.Documento_Origen.rdlc"
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "AppMinerGold.Declaración_de_produccion.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
@@ -123,7 +123,7 @@ Partial Class Documento_Origen
         '
         Me.TrimestreTableAdapter.ClearBeforeFill = True
         '
-        'Documento_Origen
+        'Declaración_de_produccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -134,7 +134,7 @@ Partial Class Documento_Origen
         Me.Controls.Add(Me.TxtClientes)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Documento_Origen"
+        Me.Name = "Declaración_de_produccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte Declaración"
         CType(Me.DeclaraBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

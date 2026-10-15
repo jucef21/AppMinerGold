@@ -1,7 +1,7 @@
 ﻿Imports System.Globalization
 Imports Microsoft.Reporting.WinForms
 
-Public Class Documento_Origen
+Public Class Declaración_de_produccion
 
     Private WithEvents rptViewer As New ReportViewer()
 

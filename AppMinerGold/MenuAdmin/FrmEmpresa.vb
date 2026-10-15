@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
 
 Public Class FrmEmpresa
 
@@ -41,18 +42,22 @@ Public Class FrmEmpresa
         Me.CboCiuSucur1.Enabled = False
         Me.TxtCorreoSucur1.Enabled = False
         Me.CboDptoSucur1.Enabled = False
-        'OFICINA 2
-        Me.TxtDireSucur2.Enabled = False
-        Me.TxtTelSucur2.Enabled = False
-        Me.CboCiuSucur2.Enabled = False
-        Me.TxtCorreoSucur2.Enabled = False
-        Me.CboDptoSucur2.Enabled = False
+        'DATOS DEL CONTADOR
+        Me.TxtNombreConta.Enabled = False
+        Me.TxtTelConta.Enabled = False
+        Me.TxtCedulaConta.Enabled = False
+        Me.TxtCorreoConta.Enabled = False
+        Me.TxtTarjetaP.Enabled = False
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Enabled = False
         Me.Txtcedrepre.Enabled = False
         Me.Txtdirerepre.Enabled = False
         Me.Txttelrepre.Enabled = False
         Me.Txtcorreorepre.Enabled = False
+        'CAMPO LOGO
+        Me.PictureLogo.Image = Global.AppMinerGold.My.Resources.TamañoLogo
+        Me.PictureLogo.Enabled = False
+        Me.BtnExaminar.Enabled = False
 
         'conexion del combobox
         Cbociuemp.DropDownStyle = ComboBoxStyle.DropDownList
@@ -68,12 +73,6 @@ Public Class FrmEmpresa
 
         Cargar_Combo(CboCiuSucur1, "Select DISTINCT ciudad_col From ciudad Order By ciudad_col")
         Cargar_Combo(CboDptoSucur1, "Select DISTINCT departamento From ciudad Order By departamento")
-
-        CboCiuSucur2.DropDownStyle = ComboBoxStyle.DropDownList
-        CboDptoSucur2.DropDownStyle = ComboBoxStyle.DropDownList
-
-        Cargar_Combo(CboCiuSucur2, "Select DISTINCT ciudad_col From ciudad Order By ciudad_col")
-        Cargar_Combo(CboDptoSucur2, "Select DISTINCT departamento From ciudad Order By departamento")
 
         'ubico el cursor
         Me.Txtbuscar.Select()
@@ -289,14 +288,14 @@ Public Class FrmEmpresa
     End Sub
 
     'OFICINA 2
-    Private Sub TxtDireSucur2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDireSucur2.KeyPress
+    Private Sub TxtNombreConta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNombreConta.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{TAB}")
         End If
     End Sub
 
-    Private Sub TxtTelSucur2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelSucur2.KeyPress
+    Private Sub TxtTelConta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTelConta.KeyPress
         'valida los campos de numeros
         If Char.IsNumber(e.KeyChar) Then
             e.Handled = False
@@ -313,21 +312,31 @@ Public Class FrmEmpresa
         End If
     End Sub
 
-    Private Sub CboCiuSucur2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CboCiuSucur2.KeyPress
+    Private Sub TxtCedulaConta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCedulaConta.KeyPress
+        'valida los campos de numeros
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
         If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{TAB}")
         End If
     End Sub
 
-    Private Sub TxtCorreoSucur2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCorreoSucur2.KeyPress
+    Private Sub TxtCorreoConta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCorreoConta.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{TAB}")
         End If
     End Sub
 
-    Private Sub CboDptoSucur2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CboDptoSucur2.KeyPress
+    Private Sub TxtTarjetaP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtTarjetaP.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             e.Handled = True
             SendKeys.Send("{TAB}")
@@ -447,11 +456,11 @@ Public Class FrmEmpresa
                     Me.TxtCorreoSucur1.Text = CStr(lectura(23))
                     Me.CboDptoSucur1.Text = CStr(lectura(22))
                     'OFICINA 2
-                    Me.TxtDireSucur2.Text = CStr(lectura(25))
-                    Me.TxtTelSucur2.Text = CStr(lectura(26))
-                    Me.CboCiuSucur2.Text = CStr(lectura(24))
-                    Me.TxtCorreoSucur2.Text = CStr(lectura(28))
-                    Me.CboDptoSucur2.Text = CStr(lectura(27))
+                    Me.TxtNombreConta.Text = CStr(lectura(25))
+                    Me.TxtTelConta.Text = CStr(lectura(26))
+                    Me.TxtCedulaConta.Text = CStr(lectura(24))
+                    Me.TxtCorreoConta.Text = CStr(lectura(28))
+                    Me.TxtTarjetaP.Text = CStr(lectura(27))
                     'DATOS DEL REPRESENTANTE
                     Me.Txtrepre.Text = CStr(lectura(10))
                     Me.Txtcedrepre.Text = CStr(lectura(11))
@@ -512,17 +521,21 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.Enabled = True
         Me.CboDptoSucur1.Enabled = True
         'OFICINA 2
-        Me.TxtDireSucur2.Enabled = True
-        Me.TxtTelSucur2.Enabled = True
-        Me.CboCiuSucur2.Enabled = True
-        Me.TxtCorreoSucur2.Enabled = True
-        Me.CboDptoSucur2.Enabled = True
+        Me.TxtNombreConta.Enabled = True
+        Me.TxtTelConta.Enabled = True
+        Me.TxtCedulaConta.Enabled = True
+        Me.TxtCorreoConta.Enabled = True
+        Me.TxtTarjetaP.Enabled = True
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Enabled = True
         Me.Txtcedrepre.Enabled = True
         Me.Txtdirerepre.Enabled = True
         Me.Txttelrepre.Enabled = True
         Me.Txtcorreorepre.Enabled = True
+
+        'CAMPO LOGO
+        Me.PictureLogo.Enabled = True
+        Me.BtnExaminar.Enabled = True
 
         'deshabilito los botones
         Me.BtnActDatosEmp.Enabled = False
@@ -546,16 +559,20 @@ Public Class FrmEmpresa
         If conn.State = ConnectionState.Open Then
             conn.Close()
         End If
+
         'CREO LA CONSULTA
-        Dim dt As New DataTable
         Conectar.Conectarse()
+        'Dim dt As New DataTable
         Dim consulta As String = "SELECT * FROM Empresa"
         Dim cmd As New OleDbCommand(consulta, conn)
+
         Try
             'ejecutamos la consulta 
             Dim lectura As OleDbDataReader = cmd.ExecuteReader()
+
             If lectura.Read = Nothing Then
                 MessageBox.Show("No se encontro Datos de la Empresa solicitada, Falta información por ingresar, Clik en botón NUEVO ...", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                 'Activo el  botones habilito campo
                 Me.Txtbuscar.Enabled = False
                 'habilito los botones
@@ -570,7 +587,9 @@ Public Class FrmEmpresa
                 Me.BtnNuevo.Enabled = True
                 Me.BtnNuevo.Focus()
             Else
-                'OFICINA PRINCIPAL
+                '======================================== 
+                ' OFICINA PRINCIPAL 
+                '========================================
                 Me.TxtId.Text = CStr(lectura(0))
                 Me.TxtNit.Text = CStr(lectura(1))
                 Me.TxtDv.Text = CStr(lectura(2))
@@ -583,25 +602,46 @@ Public Class FrmEmpresa
                 Me.CboDpto.Text = CStr(lectura(18))
                 Me.Cbopaisemp.Text = CStr(lectura(8))
                 Me.Txtweb.Text = CStr(lectura(9))
-                'OFICINA 1
+                '======================================== 
+                ' OFICINA 1 
+                '========================================
                 Me.TxtDireSucur1.Text = CStr(lectura(20))
                 Me.TxtTelSucur1.Text = CStr(lectura(21))
                 Me.CboCiuSucur1.Text = CStr(lectura(19))
                 Me.TxtCorreoSucur1.Text = CStr(lectura(23))
                 Me.CboDptoSucur1.Text = CStr(lectura(22))
-                'OFICINA 2
-                Me.TxtDireSucur2.Text = CStr(lectura(25))
-                Me.TxtTelSucur2.Text = CStr(lectura(26))
-                Me.CboCiuSucur2.Text = CStr(lectura(24))
-                Me.TxtCorreoSucur2.Text = CStr(lectura(28))
-                Me.CboDptoSucur2.Text = CStr(lectura(27))
-                'DATOS DEL REPRESENTANTE
+                '======================================== 
+                ' OFICINA 2 
+                '========================================
+                Me.TxtNombreConta.Text = CStr(lectura(25))
+                Me.TxtTelConta.Text = CStr(lectura(26))
+                Me.TxtCedulaConta.Text = CStr(lectura(24))
+                Me.TxtCorreoConta.Text = CStr(lectura(28))
+                Me.TxtTarjetaP.Text = CStr(lectura(27))
+                '======================================== 
+                ' DATOS DEL REPRESENTANTE 
+                '========================================
                 Me.Txtrepre.Text = CStr(lectura(10))
                 Me.Txtcedrepre.Text = CStr(lectura(11))
                 Me.Txtdirerepre.Text = CStr(lectura(12))
                 Me.Txttelrepre.Text = CStr(lectura(13))
                 Me.Txtcorreorepre.Text = CStr(lectura(14))
-
+                '======================================== 
+                ' LOGO 
+                '======================================== 
+                'Limpiamos primero el PictureBox
+                Me.PictureLogo.Image = Nothing
+                'Verificamos si el campo logo tiene información
+                If Not IsDBNull(lectura("logo")) Then
+                    Dim logoBytes As Byte() = DirectCast(lectura("logo"), Byte())
+                    If logoBytes.Length > 0 Then
+                        Me.PictureLogo.Image = BytesAImagen(logoBytes)
+                        Me.PictureLogo.SizeMode = PictureBoxSizeMode.Zoom
+                    End If
+                End If
+                '======================================== 
+                ' BOTONES 
+                '========================================
                 'Activo el  botones habilito campo
                 Me.Txtbuscar.Enabled = False
                 'habilito los botones
@@ -614,16 +654,18 @@ Public Class FrmEmpresa
                 Me.BtnModificar.Enabled = True
                 Me.BtnGuardaCambios.Enabled = False
             End If
-            'drd.Close()
+            lectura.Close()
             conn.Close()
         Catch ex As Exception
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
             MessageBox.Show("Falta información por ingresar " + ex.Message, "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
             'Activo el  boton de nuevo
             Me.BtnModificar.Enabled = True
             Me.BtnModificar.Select()
             Me.BtnModificar.Focus()
-            'Me.BtnNuevo.Enabled = False
-            'Me.BtnNuevo.Focus()
         End Try
     End Sub
 
@@ -675,6 +717,15 @@ Public Class FrmEmpresa
             Me.TxtNit.Focus()
         Else
             'llamado de la funcion
+            '========================================================================
+            If PictureLogo.Image Is Nothing Then
+                MessageBox.Show("El PictureBox no contiene ninguna imagen.")
+                Exit Sub
+            End If
+
+            MessageBox.Show("Imagen cargada correctamente.")
+            '========================================================================
+
             GuardarEmpresa()
             'cierro conexion
             conn.Close()
@@ -683,143 +734,291 @@ Public Class FrmEmpresa
     End Sub
 
     'PROCEDIMIENTO PARA GUARDAR DATOS
+    'Private Sub GuardarEmpresa()
+
+    '    'variables de fecha de auditoria
+    '    Dim fechaC As Date = CDate(Format(Date.Now.Date))
+    '    Dim fechaM As Date = CDate(Format(Date.Now.Date))
+
+    '    'revisamos la conexion
+    '    If conn.State() = ConnectionState.Closed Then
+    '        conn.Open()
+    '    End If
+
+    '    Try
+    '        If ValidaDatosEmpresa() = False Then Exit Sub
+
+    '        'empresa
+    '        'OFICINA PRINCIPAL
+    '        Dim nit_empresa As String = ""
+    '        Dim dvempresa As String = ""
+    '        Dim rucom As String = ""
+    '        Dim nombre_empresa As String = ""
+    '        Dim direccion_empresa As String = ""
+    '        Dim telfono_empresa As String = ""
+    '        Dim correo_empresa As String = ""
+    '        Dim ciudad As String = ""
+    '        Dim dpto As String = ""
+    '        Dim pais As String = ""
+    '        Dim sitioweb_empresa As String = ""
+    '        'OFICINA 1
+    '        Dim DireSucur1 As String = ""
+    '        Dim TelSucur1 As String = ""
+    '        Dim CiuSucur1 As String = ""
+    '        Dim CorreoSucur1 As String = ""
+    '        Dim DptoSucur1 As String = ""
+    '        'OFICINA 2
+    '        Dim DireSucur2 As String = ""
+    '        Dim TelSucur2 As String = ""
+    '        Dim CiuSucur2 As String = ""
+    '        Dim CorreoSucur2 As String = ""
+    '        Dim DtoSucur2 As String = ""
+    '        'DATOS DEL REPRESENTANTE
+    '        Dim representante_empresa As String = ""
+    '        Dim cedula_repre As String = ""
+    '        Dim dire_repre As String = ""
+    '        Dim tele_repre As String = ""
+    '        Dim email_repre As String = ""
+
+    '        'OFICINA PRINCIPAL
+    '        nit_empresa = Me.TxtNit.Text
+    '        dvempresa = Me.TxtDv.Text
+    '        rucom = Me.TxtRucom.Text
+    '        nombre_empresa = Me.TxtRsocial.Text
+    '        direccion_empresa = Me.TxtDireEmp.Text
+    '        telfono_empresa = Me.TxtTelemp.Text
+    '        correo_empresa = Me.Txtcorreoemp.Text
+    '        ciudad = Me.Cbociuemp.Text
+    '        dpto = Me.CboDpto.Text
+    '        pais = Me.Cbopaisemp.Text
+    '        sitioweb_empresa = Me.Txtweb.Text
+    '        'OFICINA 1
+    '        DireSucur1 = Me.TxtDireSucur1.Text
+    '        TelSucur1 = Me.TxtTelSucur1.Text
+    '        CiuSucur1 = Me.CboCiuSucur1.Text
+    '        CorreoSucur1 = Me.TxtCorreoSucur1.Text
+    '        DptoSucur1 = Me.CboDptoSucur1.Text
+    '        'OFICINA 2
+    '        DireSucur2 = Me.TxtDireSucur2.Text
+    '        TelSucur2 = Me.TxtTelSucur2.Text
+    '        CiuSucur2 = Me.CboCiuSucur2.Text
+    '        CorreoSucur2 = Me.TxtCorreoSucur2.Text
+    '        DtoSucur2 = Me.CboDptoSucur2.Text
+    '        'DATOS DEL REPRESENTANTE
+    '        representante_empresa = Me.Txtrepre.Text
+    '        cedula_repre = Me.Txtcedrepre.Text
+    '        dire_repre = Me.Txtdirerepre.Text
+    '        tele_repre = Me.Txttelrepre.Text
+    '        email_repre = Me.Txtcorreorepre.Text
+
+    '        cmd.CommandType = CommandType.Text
+    '        cmd.Connection = conn
+
+    '        sql = "INSERT INTO empresa (nit_empresa, dvempresa, nombre_empresa, direccion_empresa, telefono_empresa, " &
+    '                          "correo_empresa, ciudad, pais, sitioweb_empresa, representante_empresa, cedula_repre, " &
+    '                          "dire_repre, tele_repre, email_repre, fecha_creado, fecha_modifica, rucom, dpto, " &
+    '                          "sucursal1ciu, diresucur1, telsucu1, dptosucur1, correosucur1, " &
+    '                          "sucursal2ciu, diresucur2, telsucu2, dptosucur2, correosucur2, logo) VALUES " &
+    '                          "('" & TxtNit.Text & "','" & TxtDv.Text & "','" & TxtRsocial.Text & "', '" & TxtDireEmp.Text & "', " &
+    '                          "'" & TxtTelemp.Text & "','" & Txtcorreoemp.Text & "','" & Cbociuemp.Text & "', " &
+    '                          "'" & Cbopaisemp.Text & "','" & Txtweb.Text & "', '" & Txtrepre.Text & "', '" & Txtcedrepre.Text & "'," &
+    '                          "'" & Txtdirerepre.Text & "','" & Txttelrepre.Text & "', " &
+    '                          "'" & Txtcorreorepre.Text & "','" & fechaC & "', '" & fechaM & "', '" & TxtRucom.Text & "', '" & CboDpto.Text & "', " &
+    '                          "'" & CiuSucur1 & "', '" & TxtDireSucur1.Text & "', '" & TxtTelSucur1.Text & "', '" & CboDptoSucur1.Text & "', '" & TxtCorreoSucur1.Text & "', " &
+    '                          "'" & CiuSucur2 & "', '" & TxtDireSucur2.Text & "', '" & TxtTelSucur2.Text & "', '" & CboDptoSucur2.Text & "', '" & TxtCorreoSucur2.Text & "')"
+
+    '        cmd.CommandText = sql
+
+    '        'ejecutamos la consulta 
+    '        cmd.ExecuteNonQuery()
+    '        'cierro conexion
+    '        conn.Close()
+
+    '        MsgBox("Los datos se han guardado Correctamente! ", MsgBoxStyle.Information, "AppMinerGold")
+
+    '        'limpio los campos
+    '        Limpiar_Cajas()
+
+    '        'deshabilito los textos
+    '        DesHabilitaTextos()
+
+    '        'ubicamos el cursor
+    '        Me.BtnActDatosEmp.Enabled = True
+    '        Me.BtnActDatosEmp.Select()
+    '        Me.BtnActDatosEmp.Focus()
+
+    '        Me.TxtNit.Enabled = False
+
+    '        'habilitamos los botones
+    '        'Me.BtnNuevo.Enabled = False
+    '        'Me.BtnNuevo.Visible = True
+    '        Me.BtnGuardar.Enabled = False
+    '        Me.BtnGuardar.Visible = False
+    '        Me.BtnModificar.Enabled = False
+    '        Me.BtnModificar.Visible = True
+    '        Me.BtnGuardaCambios.Enabled = False
+    '        Me.BtnGuardaCambios.Visible = False
+
+    '        Refresh()
+
+    '    Catch ex As Exception
+    '        MsgBox("Error al guardar los datos " & ex.Message, MsgBoxStyle.Information, "AppMinerGold")
+    '        Me.BtnActDatosEmp.Enabled = True
+    '        Me.BtnActDatosEmp.Select()
+    '        Me.BtnActDatosEmp.Focus()
+    '    End Try
+
+    'End Sub
+
+    'valida todos los campos no pueden estar vacios
     Private Sub GuardarEmpresa()
 
-        'variables de fecha de auditoria
-        Dim fechaC As Date = CDate(Format(Date.Now.Date))
-        Dim fechaM As Date = CDate(Format(Date.Now.Date))
-
-        'revisamos la conexion
-        If conn.State() = ConnectionState.Closed Then
-            conn.Open()
-        End If
+        Dim fechaC As Date = Date.Now.Date
+        Dim fechaM As Date = Date.Now.Date
 
         Try
+            'Validamos primero
             If ValidaDatosEmpresa() = False Then Exit Sub
 
-            'empresa
-            'OFICINA PRINCIPAL
-            Dim nit_empresa As String = ""
-            Dim dvempresa As String = ""
-            Dim rucom As String = ""
-            Dim nombre_empresa As String = ""
-            Dim direccion_empresa As String = ""
-            Dim telfono_empresa As String = ""
-            Dim correo_empresa As String = ""
-            Dim ciudad As String = ""
-            Dim dpto As String = ""
-            Dim pais As String = ""
-            Dim sitioweb_empresa As String = ""
-            'OFICINA 1
-            Dim DireSucur1 As String = ""
-            Dim TelSucur1 As String = ""
-            Dim CiuSucur1 As String = ""
-            Dim CorreoSucur1 As String = ""
-            Dim DptoSucur1 As String = ""
-            'OFICINA 2
-            Dim DireSucur2 As String = ""
-            Dim TelSucur2 As String = ""
-            Dim CiuSucur2 As String = ""
-            Dim CorreoSucur2 As String = ""
-            Dim DtoSucur2 As String = ""
-            'DATOS DEL REPRESENTANTE
-            Dim representante_empresa As String = ""
-            Dim cedula_repre As String = ""
-            Dim dire_repre As String = ""
-            Dim tele_repre As String = ""
-            Dim email_repre As String = ""
+            'Abrimos conexión
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
 
-            'OFICINA PRINCIPAL
-            nit_empresa = Me.TxtNit.Text
-            dvempresa = Me.TxtDv.Text
-            rucom = Me.TxtRucom.Text
-            nombre_empresa = Me.TxtRsocial.Text
-            direccion_empresa = Me.TxtDireEmp.Text
-            telfono_empresa = Me.TxtTelemp.Text
-            correo_empresa = Me.Txtcorreoemp.Text
-            ciudad = Me.Cbociuemp.Text
-            dpto = Me.CboDpto.Text
-            pais = Me.Cbopaisemp.Text
-            sitioweb_empresa = Me.Txtweb.Text
-            'OFICINA 1
-            DireSucur1 = Me.TxtDireSucur1.Text
-            TelSucur1 = Me.TxtTelSucur1.Text
-            CiuSucur1 = Me.CboCiuSucur1.Text
-            CorreoSucur1 = Me.TxtCorreoSucur1.Text
-            DptoSucur1 = Me.CboDptoSucur1.Text
-            'OFICINA 2
-            DireSucur2 = Me.TxtDireSucur2.Text
-            TelSucur2 = Me.TxtTelSucur2.Text
-            CiuSucur2 = Me.CboCiuSucur2.Text
-            CorreoSucur2 = Me.TxtCorreoSucur2.Text
-            DtoSucur2 = Me.CboDptoSucur2.Text
-            'DATOS DEL REPRESENTANTE
-            representante_empresa = Me.Txtrepre.Text
-            cedula_repre = Me.Txtcedrepre.Text
-            dire_repre = Me.Txtdirerepre.Text
-            tele_repre = Me.Txttelrepre.Text
-            email_repre = Me.Txtcorreorepre.Text
+            'Limpiamos parámetros anteriores
+            cmd.Parameters.Clear()
 
-            cmd.CommandType = CommandType.Text
             cmd.Connection = conn
+            cmd.CommandType = CommandType.Text
 
-            sql = "INSERT INTO empresa (nit_empresa, dvempresa, nombre_empresa, direccion_empresa, telefono_empresa, " &
-                              "correo_empresa, ciudad, pais, sitioweb_empresa, representante_empresa, cedula_repre, " &
-                              "dire_repre, tele_repre, email_repre, fecha_creado, fecha_modifica, rucom, dpto, " &
-                              "sucursal1ciu, diresucur1, telsucu1, dptosucur1, correosucur1, " &
-                              "sucursal2ciu, diresucur2, telsucu2, dptosucur2, correosucur2) VALUES " &
-                              "('" & TxtNit.Text & "','" & TxtDv.Text & "','" & TxtRsocial.Text & "', '" & TxtDireEmp.Text & "', " &
-                              "'" & TxtTelemp.Text & "','" & Txtcorreoemp.Text & "','" & Cbociuemp.Text & "', " &
-                              "'" & Cbopaisemp.Text & "','" & Txtweb.Text & "', '" & Txtrepre.Text & "', '" & Txtcedrepre.Text & "'," &
-                              "'" & Txtdirerepre.Text & "','" & Txttelrepre.Text & "', " &
-                              "'" & Txtcorreorepre.Text & "','" & fechaC & "', '" & fechaM & "', '" & TxtRucom.Text & "', '" & CboDpto.Text & "', " &
-                              "'" & CiuSucur1 & "', '" & TxtDireSucur1.Text & "', '" & TxtTelSucur1.Text & "', '" & CboDptoSucur1.Text & "', '" & TxtCorreoSucur1.Text & "', " &
-                              "'" & CiuSucur2 & "', '" & TxtDireSucur2.Text & "', '" & TxtTelSucur2.Text & "', '" & CboDptoSucur2.Text & "', '" & TxtCorreoSucur2.Text & "')"
+            cmd.CommandText =
+            "INSERT INTO empresa (" &
+            "nit_empresa, dvempresa, nombre_empresa, direccion_empresa, telefono_empresa, " &
+            "correo_empresa, ciudad, pais, sitioweb_empresa, representante_empresa, cedula_repre, " &
+            "dire_repre, tele_repre, email_repre, fecha_creado, fecha_modifica, rucom, dpto, " &
+            "sucursal1ciu, diresucur1, telsucu1, dptosucur1, correosucur1, " &
+            "sucursal2ciu, diresucur2, telsucur2, dptosucur2, correosucur2, logo" &
+            ") VALUES (" &
+            "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
-            cmd.CommandText = sql
+            '========================================
+            ' DATOS EMPRESA
+            '========================================
+            cmd.Parameters.Add("@nit_empresa", OleDbType.VarWChar).Value = TxtNit.Text.Trim()
+            cmd.Parameters.Add("@dvempresa", OleDbType.VarWChar).Value = TxtDv.Text.Trim()
+            cmd.Parameters.Add("@nombre_empresa", OleDbType.VarWChar).Value = TxtRsocial.Text.Trim()
+            cmd.Parameters.Add("@direccion_empresa", OleDbType.VarWChar).Value = TxtDireEmp.Text.Trim()
+            cmd.Parameters.Add("@telefono_empresa", OleDbType.VarWChar).Value = TxtTelemp.Text.Trim()
+            cmd.Parameters.Add("@correo_empresa", OleDbType.VarWChar).Value = Txtcorreoemp.Text.Trim()
+            cmd.Parameters.Add("@ciudad", OleDbType.VarWChar).Value = Cbociuemp.Text.Trim()
+            cmd.Parameters.Add("@pais", OleDbType.VarWChar).Value = Cbopaisemp.Text.Trim()
+            cmd.Parameters.Add("@sitioweb_empresa", OleDbType.VarWChar).Value = Txtweb.Text.Trim()
 
-            'ejecutamos la consulta 
+            '========================================
+            ' REPRESENTANTE
+            '========================================
+            cmd.Parameters.Add("@representante_empresa", OleDbType.VarWChar).Value = Txtrepre.Text.Trim()
+            cmd.Parameters.Add("@cedula_repre", OleDbType.VarWChar).Value = Txtcedrepre.Text.Trim()
+            cmd.Parameters.Add("@dire_repre", OleDbType.VarWChar).Value = Txtdirerepre.Text.Trim()
+            cmd.Parameters.Add("@tele_repre", OleDbType.VarWChar).Value = Txttelrepre.Text.Trim()
+            cmd.Parameters.Add("@email_repre", OleDbType.VarWChar).Value = Txtcorreorepre.Text.Trim()
+
+            '========================================
+            ' FECHAS
+            '========================================
+            cmd.Parameters.Add("@fecha_creado", OleDbType.Date).Value = fechaC
+            cmd.Parameters.Add("@fecha_modifica", OleDbType.Date).Value = fechaM
+
+            '========================================
+            ' DATOS ADICIONALES
+            '========================================
+            cmd.Parameters.Add("@rucom", OleDbType.VarWChar).Value = TxtRucom.Text.Trim()
+            cmd.Parameters.Add("@dpto", OleDbType.VarWChar).Value = CboDpto.Text.Trim()
+
+            '========================================
+            ' SUCURSAL 1
+            '========================================
+            cmd.Parameters.Add("@sucursal1ciu", OleDbType.VarWChar).Value = CboCiuSucur1.Text.Trim()
+            cmd.Parameters.Add("@diresucur1", OleDbType.VarWChar).Value = TxtDireSucur1.Text.Trim()
+            cmd.Parameters.Add("@telsucu1", OleDbType.VarWChar).Value = TxtTelSucur1.Text.Trim()
+            cmd.Parameters.Add("@dptosucur1", OleDbType.VarWChar).Value = CboDptoSucur1.Text.Trim()
+            cmd.Parameters.Add("@correosucur1", OleDbType.VarWChar).Value = TxtCorreoSucur1.Text.Trim()
+
+            '========================================
+            ' SUCURSAL 2
+            '========================================
+            cmd.Parameters.Add("@sucursal2ciu", OleDbType.VarWChar).Value = TxtCedulaConta.Text.Trim()
+            cmd.Parameters.Add("@diresucur2", OleDbType.VarWChar).Value = TxtNombreConta.Text.Trim()
+            cmd.Parameters.Add("@telsucur2", OleDbType.VarWChar).Value = TxtTelConta.Text.Trim()
+            cmd.Parameters.Add("@dptosucur2", OleDbType.VarWChar).Value = TxtTarjetaP.Text.Trim()
+            cmd.Parameters.Add("@correosucur2", OleDbType.VarWChar).Value = TxtCorreoConta.Text.Trim()
+
+            '========================================
+            Dim Imagenes() As Byte = Nothing
+            If PictureLogo.Image IsNot Nothing Then
+                Using MS As New MemoryStream()
+                    'Convertimos siempre el logo a PNG
+                    PictureLogo.Image.Save(MS, Imaging.ImageFormat.Png)
+                    'Obtenemos solamente los bytes reales de la imagen
+                    Imagenes = MS.ToArray()
+                End Using
+            End If
+            If Imagenes Is Nothing OrElse Imagenes.Length = 0 Then
+                cmd.Parameters.Add("@logo", OleDbType.Binary).Value = DBNull.Value
+            Else
+                cmd.Parameters.Add("@logo", OleDbType.Binary).Value = Imagenes
+            End If
+            '========================================
+
+            MessageBox.Show("Tamaño del logo: " & If(Imagenes Is Nothing, "0", Imagenes.Length.ToString()) & " bytes")
+
+            '====================
             cmd.ExecuteNonQuery()
-            'cierro conexion
+
             conn.Close()
+            MessageBox.Show("Los datos se han guardado correctamente!", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            MsgBox("Los datos se han guardado Correctamente! ", MsgBoxStyle.Information, "AppMinerGold")
+            '========================================
+            ' LIMPIAR
+            '========================================
 
-            'limpio los campos
             Limpiar_Cajas()
 
-            'deshabilito los textos
             DesHabilitaTextos()
 
-            'ubicamos el cursor
             Me.BtnActDatosEmp.Enabled = True
             Me.BtnActDatosEmp.Select()
             Me.BtnActDatosEmp.Focus()
 
             Me.TxtNit.Enabled = False
 
-            'habilitamos los botones
-            'Me.BtnNuevo.Enabled = False
-            'Me.BtnNuevo.Visible = True
             Me.BtnGuardar.Enabled = False
             Me.BtnGuardar.Visible = False
+
             Me.BtnModificar.Enabled = False
             Me.BtnModificar.Visible = True
+
             Me.BtnGuardaCambios.Enabled = False
             Me.BtnGuardaCambios.Visible = False
 
             Refresh()
 
         Catch ex As Exception
-            MsgBox("Error al guardar los datos " & ex.Message, MsgBoxStyle.Information, "AppMinerGold")
+
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+            MessageBox.Show("Error al guardar los datos: " & ex.Message, "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
             Me.BtnActDatosEmp.Enabled = True
             Me.BtnActDatosEmp.Select()
             Me.BtnActDatosEmp.Focus()
+
         End Try
 
     End Sub
 
-    'valida todos los campos no pueden estar vacios
     Private Function ValidaDatosEmpresa() As Boolean
         'empresa
         If Len(Me.TxtNit.Text.Trim) = 0 Then MsgBox("El Campo Nit no puede estar vacío, Ingrese los Datos", vbCritical, "AppMinerGold") : Me.TxtNit.Focus() : Return True : Exit Function
@@ -862,17 +1061,20 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.Enabled = True
         Me.CboDptoSucur1.Enabled = True
         'OFICINA 2
-        Me.TxtDireSucur2.Enabled = True
-        Me.TxtTelSucur2.Enabled = True
-        Me.CboCiuSucur2.Enabled = True
-        Me.TxtCorreoSucur2.Enabled = True
-        Me.CboDptoSucur2.Enabled = True
+        Me.TxtNombreConta.Enabled = True
+        Me.TxtTelConta.Enabled = True
+        Me.TxtCedulaConta.Enabled = True
+        Me.TxtCorreoConta.Enabled = True
+        Me.TxtTarjetaP.Enabled = True
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Enabled = True
         Me.Txtcedrepre.Enabled = True
         Me.Txtdirerepre.Enabled = True
         Me.Txttelrepre.Enabled = True
         Me.Txtcorreorepre.Enabled = True
+        'DATOS DEL LOGO
+        Me.PictureLogo.Enabled = True
+        Me.BtnExaminar.Enabled = True
 
         'habilitamos los botones 
         Me.BtnActDatosEmp.Enabled = False
@@ -889,95 +1091,249 @@ Public Class FrmEmpresa
 
     'BOTON GUARDA LOS CAMBIOS
     Private Sub BtnGuardaCambios_Click(sender As System.Object, e As System.EventArgs) Handles BtnGuardaCambios.Click
-        'variables de fecha de auditoria
-        Dim fechaM As Date = CDate(Format(Date.Now.Date))
-        Dim cmd As New OleDb.OleDbCommand
-        'revisamos la conexin a la base de datos
-        If conn.State() = ConnectionState.Closed Then
-            conn.Open()
-        End If
+
+        Dim fechaM As Date = Date.Now.Date
+
         Try
-            ' Verifico que haya escrito el codigo
-            'If Me.Txtbuscar.Text = "" Then
-            If Me.Txtbuscar.Text = TxtNit.Text Then
-                ' Si no lo escribió, mando mensaje de error
-                MsgBox("Debe ingresar un Nit Válido", MsgBoxStyle.Exclamation, "AppMinerGold")
-                Me.Txtbuscar.Select()
 
-                'ubico el cursor
-                Me.Txtbuscar.Select()
-                Me.Txtbuscar.Focus()
-            Else
-                Dim sqlquery As String = "UPDATE empresa SET nit_empresa = '" & Me.TxtNit.Text & "', " &
-                                                        "dvempresa = '" & Me.TxtDv.Text & "', " &
-                                                        "nombre_empresa = '" & Me.TxtRsocial.Text & "'," &
-                                                        "direccion_empresa = '" & Me.TxtDireEmp.Text & "'," &
-                                                        "telefono_empresa = '" & TxtTelemp.Text & "', " &
-                                                        "correo_empresa = '" & Me.Txtcorreoemp.Text & "', " &
-                                                        "ciudad = '" & Me.Cbociuemp.Text & "'," &
-                                                        "pais = '" & Me.Cbopaisemp.Text & "', " &
-                                                        "sitioweb_empresa = '" & Me.Txtweb.Text & "', " &
-                                                        "representante_empresa = '" & Me.Txtrepre.Text & "', " &
-                                                        "cedula_repre = '" & Me.Txtcedrepre.Text & "', " &
-                                                        "dire_repre = '" & Me.Txtdirerepre.Text & "', " &
-                                                        "tele_repre = '" & Me.Txttelrepre.Text & "', " &
-                                                        "email_repre = '" & Me.Txtcorreorepre.Text & "', " &
-                                                        "fecha_modifica = '" & fechaM & "', " &
-                                                        "rucom = '" & Me.TxtRucom.Text & "', " &
-                                                        "dpto = '" & Me.CboDpto.Text & "', " &
-                                                        "sucursal1ciu = '" & Me.CboCiuSucur1.Text & "', " &
-                                                        "diresucur1 = '" & Me.TxtDireSucur1.Text & "', " &
-                                                        "telsucu1 =  '" & Me.TxtTelSucur1.Text & "', " &
-                                                        "dptosucur1 = '" & Me.CboDptoSucur1.Text & "', " &
-                                                        "correosucur1 = '" & Me.TxtCorreoSucur1.Text & "', " &
-                                                        "sucursal2ciu = '" & Me.CboCiuSucur2.Text & "', " &
-                                                        "diresucur2 = '" & Me.TxtDireSucur2.Text & "', " &
-                                                        "telsucu2 = '" & Me.TxtTelSucur2.Text & "', " &
-                                                        "dptosucur2 = '" & Me.CboDptoSucur2.Text & "', " &
-                                                        "correosucur2 = '" & Me.TxtCorreoSucur2.Text & "' WHERE nit_empresa = '" & Me.TxtNit.Text & "' "
-
-                cmd = New OleDb.OleDbCommand(sqlquery, conn)
-                'ejecutamos la consulta
-                cmd.ExecuteNonQuery()
-                'CIERRO LA CONEXION
-                conn.Close()
-                'presentamos el mensaje 
-                MessageBox.Show("Registro actualizado exitosamente. ", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                'limpio los campos
-                DesHabilitaTextos()
-                'limpia los campos de texto
-                Limpiar_Cajas()
-                'habilito texto
-                Me.Txtbuscar.Enabled = False
-                'habilito los botones
-                Me.BtnBuscar.Enabled = False
-                Me.BtnNuevo.Enabled = False
-                Me.BtnGuardar.Enabled = False
-                Me.BtnModificar.Enabled = False
-                Me.BtnGuardaCambios.Enabled = False
-                'ubico el cursor
-                Me.BtnActDatosEmp.Enabled = True
-                Me.BtnActDatosEmp.Select()
-                Me.BtnActDatosEmp.Focus()
+            '========================================
+            ' VALIDAR NIT
+            '========================================
+            If String.IsNullOrWhiteSpace(TxtNit.Text) Then
+                MessageBox.Show("El NIT de la empresa no puede estar vacío.", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                TxtNit.Focus()
+                Exit Sub
             End If
-        Catch ex As Exception
-            MessageBox.Show("Error al Modificar Datos. " + Err.Description, "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            'para limpiar los campos
-            Limpiar_Cajas()
-            'deshabilitar los campor de texto
+
+            '========================================
+            ' CONVERTIR LOGO A BYTES
+            '========================================
+            Dim Imagenes() As Byte = Nothing
+            If PictureLogo.Image IsNot Nothing Then
+                Using MS As New MemoryStream()
+                    PictureLogo.Image.Save(MS, Imaging.ImageFormat.Png)
+                    Imagenes = MS.ToArray()
+                End Using
+            End If
+
+            '========================================
+            ' ABRIR CONEXIÓN
+            '========================================
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            '========================================
+            ' CREAR COMANDO
+            '========================================
+            Using cmd As New OleDb.OleDbCommand()
+
+                cmd.Connection = conn
+                cmd.CommandType = CommandType.Text
+
+                cmd.CommandText =
+                "UPDATE [empresa] SET " &
+                "[nit_empresa] = ?, " &
+                "[dvempresa] = ?, " &
+                "[nombre_empresa] = ?, " &
+                "[direccion_empresa] = ?, " &
+                "[telefono_empresa] = ?, " &
+                "[correo_empresa] = ?, " &
+                "[ciudad] = ?, " &
+                "[pais] = ?, " &
+                "[sitioweb_empresa] = ?, " &
+                "[representante_empresa] = ?, " &
+                "[cedula_repre] = ?, " &
+                "[dire_repre] = ?, " &
+                "[tele_repre] = ?, " &
+                "[email_repre] = ?, " &
+                "[fecha_modifica] = ?, " &
+                "[rucom] = ?, " &
+                "[Dpto] = ?, " &
+                "[sucursal1ciu] = ?, " &
+                "[diresucur1] = ?, " &
+                "[telsucu1] = ?, " &
+                "[dptosucur1] = ?, " &
+                "[correosucur1] = ?, " &
+                "[sucursal2ciu] = ?, " &
+                "[diresucur2] = ?, " &
+                "[telsucu2] = ?, " &
+                "[dptosucur2] = ?, " &
+                "[correosucur2] = ?, " &
+                "[logo] = ? " &
+                "WHERE [nit_empresa] = ?"
+
+                '========================================
+                ' PARÁMETRO 1 nit_empresa
+                '========================================
+                cmd.Parameters.Add("@p1", OleDbType.VarWChar).Value = TxtNit.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 2 dvempresa
+                '========================================
+                cmd.Parameters.Add("@p2", OleDbType.VarWChar).Value = TxtDv.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 3 nombre_empresa
+                '========================================
+                cmd.Parameters.Add("@p3", OleDbType.VarWChar).Value = TxtRsocial.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 4 direccion_empresa
+                '========================================
+                cmd.Parameters.Add("@p4", OleDbType.VarWChar).Value = TxtDireEmp.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 5 telefono_empresa
+                '========================================
+                cmd.Parameters.Add("@p5", OleDbType.VarWChar).Value = TxtTelemp.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 6 correo_empresa
+                '========================================
+                cmd.Parameters.Add("@p6", OleDbType.VarWChar).Value = Txtcorreoemp.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 7 ciudad
+                '========================================
+                cmd.Parameters.Add("@p7", OleDbType.VarWChar).Value = Cbociuemp.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 8 pais
+                '========================================
+                cmd.Parameters.Add("@p8", OleDbType.VarWChar).Value = Cbopaisemp.Text.Trim()
+
+                '========================================
+                ' PARÁMETRO 9 sitioweb_empresa
+                '========================================
+                cmd.Parameters.Add("@p9", OleDbType.VarWChar).Value = Txtweb.Text.Trim()
+
+                '========================================
+                ' REPRESENTANTE
+                '========================================
+                cmd.Parameters.Add("@p10", OleDbType.VarWChar).Value = Txtrepre.Text.Trim()
+                cmd.Parameters.Add("@p11", OleDbType.VarWChar).Value = Txtcedrepre.Text.Trim()
+                cmd.Parameters.Add("@p12", OleDbType.VarWChar).Value = Txtdirerepre.Text.Trim()
+                cmd.Parameters.Add("@p13", OleDbType.VarWChar).Value = Txttelrepre.Text.Trim()
+                cmd.Parameters.Add("@p14", OleDbType.VarWChar).Value = Txtcorreorepre.Text.Trim()
+
+                '========================================
+                ' FECHA
+                '========================================
+                cmd.Parameters.Add("@p15", OleDbType.Date).Value = fechaM
+
+                '========================================
+                ' DATOS ADICIONALES
+                '========================================
+                cmd.Parameters.Add("@p16", OleDbType.VarWChar).Value = TxtRucom.Text.Trim()
+                cmd.Parameters.Add("@p17", OleDbType.VarWChar).Value = CboDpto.Text.Trim()
+
+                '========================================
+                ' SUCURSAL 1
+                '========================================
+                cmd.Parameters.Add("@p18", OleDbType.VarWChar).Value = CboCiuSucur1.Text.Trim()
+                cmd.Parameters.Add("@p19", OleDbType.VarWChar).Value = TxtDireSucur1.Text.Trim()
+                cmd.Parameters.Add("@p20", OleDbType.VarWChar).Value = TxtTelSucur1.Text.Trim()
+                cmd.Parameters.Add("@p21", OleDbType.VarWChar).Value = CboDptoSucur1.Text.Trim()
+                cmd.Parameters.Add("@p22", OleDbType.VarWChar).Value = TxtCorreoSucur1.Text.Trim()
+
+                '========================================
+                ' SUCURSAL 2
+                '========================================
+                cmd.Parameters.Add("@p23", OleDbType.VarWChar).Value = TxtCedulaConta.Text.Trim()
+                cmd.Parameters.Add("@p24", OleDbType.VarWChar).Value = TxtNombreConta.Text.Trim()
+                cmd.Parameters.Add("@p25", OleDbType.VarWChar).Value = TxtTelConta.Text.Trim()
+                cmd.Parameters.Add("@p26", OleDbType.VarWChar).Value = TxtTarjetaP.Text.Trim()
+                cmd.Parameters.Add("@p27", OleDbType.VarWChar).Value = TxtCorreoConta.Text.Trim()
+
+                '========================================
+                ' LOGO
+                '========================================
+                If Imagenes Is Nothing OrElse Imagenes.Length = 0 Then
+                    cmd.Parameters.Add("@p28", OleDbType.Binary).Value = DBNull.Value
+                Else
+                    cmd.Parameters.Add("@p28", OleDbType.Binary).Value = Imagenes
+                End If
+
+                '========================================
+                ' NIT PARA WHERE
+                '========================================
+                cmd.Parameters.Add("@p29", OleDbType.VarWChar).Value = TxtNit.Text.Trim()
+
+                '========================================
+                ' COMPROBACIÓN
+                '========================================
+                'Debe haber exactamente 29 parámetros
+                If cmd.Parameters.Count <> 29 Then
+                    Throw New Exception(
+                    "La consulta requiere 29 parámetros y se agregaron " &
+                    cmd.Parameters.Count.ToString())
+                End If
+
+                '========================================
+                ' EJECUTAR UPDATE
+                '========================================
+                Dim registrosActualizados As Integer = cmd.ExecuteNonQuery()
+
+                If registrosActualizados = 0 Then
+                    MessageBox.Show("No se encontró la empresa con el NIT indicado.", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    Exit Sub
+                End If
+            End Using
+
+            '========================================
+            ' CERRAR CONEXIÓN
+            '========================================
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+            '========================================
+            ' MENSAJE
+            '========================================
+            MessageBox.Show("Registro actualizado exitosamente.", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            '========================================
+            ' LIMPIAR
+            '========================================
+
             DesHabilitaTextos()
-            'habilitamos los botones
+            Limpiar_Cajas()
+
+            Me.Txtbuscar.Enabled = False
+
             Me.BtnBuscar.Enabled = False
             Me.BtnNuevo.Enabled = False
             Me.BtnGuardar.Enabled = False
             Me.BtnModificar.Enabled = False
             Me.BtnGuardaCambios.Enabled = False
-            'posicionamos en cursor
+
             Me.BtnActDatosEmp.Enabled = True
             Me.BtnActDatosEmp.Select()
             Me.BtnActDatosEmp.Focus()
+
+        Catch ex As Exception
+
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+
+            MessageBox.Show(
+            "Error al modificar los datos:" &
+            vbCrLf & vbCrLf &
+            ex.Message,
+            "AppMinerGold",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+
+            Me.BtnActDatosEmp.Enabled = True
+            Me.BtnActDatosEmp.Select()
+            Me.BtnActDatosEmp.Focus()
+
         End Try
+
     End Sub
+
 
 #End Region
 
@@ -1006,17 +1362,24 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.Enabled = True
         Me.CboDptoSucur1.Enabled = True
         'OFICINA 2
-        Me.TxtDireSucur2.Enabled = True
-        Me.TxtTelSucur2.Enabled = True
-        Me.CboCiuSucur2.Enabled = True
-        Me.TxtCorreoSucur2.Enabled = True
-        Me.CboDptoSucur2.Enabled = True
+        Me.TxtNombreConta.Enabled = True
+        Me.TxtTelConta.Enabled = True
+        Me.TxtCedulaConta.Enabled = True
+        Me.TxtCorreoConta.Enabled = True
+        Me.TxtTarjetaP.Enabled = True
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Enabled = True
         Me.Txtcedrepre.Enabled = True
         Me.Txtdirerepre.Enabled = True
         Me.Txttelrepre.Enabled = True
         Me.Txtcorreorepre.Enabled = True
+        'DATOS DEL LOGO
+        Me.PictureLogo.Visible = True
+        Me.PictureLogo.Enabled = True
+        'Me.PictureLogo.Image = Nothing
+        Me.PictureLogo.Refresh()
+
+        Me.BtnExaminar.Enabled = True
 
     End Sub
 
@@ -1043,17 +1406,24 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.Enabled = False
         Me.CboDptoSucur1.Enabled = False
         'OFICINA 2
-        Me.TxtDireSucur2.Enabled = False
-        Me.TxtTelSucur2.Enabled = False
-        Me.CboCiuSucur2.Enabled = False
-        Me.TxtCorreoSucur2.Enabled = False
-        Me.CboDptoSucur2.Enabled = False
+        Me.TxtNombreConta.Enabled = False
+        Me.TxtTelConta.Enabled = False
+        Me.TxtCedulaConta.Enabled = False
+        Me.TxtCorreoConta.Enabled = False
+        Me.TxtTarjetaP.Enabled = False
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Enabled = False
         Me.Txtcedrepre.Enabled = False
         Me.Txtdirerepre.Enabled = False
         Me.Txttelrepre.Enabled = False
         Me.Txtcorreorepre.Enabled = False
+        'DATOS DEL LOGO
+        Me.PictureLogo.Visible = True
+        Me.PictureLogo.Enabled = False
+        'Me.PictureLogo.Image = Nothing
+        Me.PictureLogo.Refresh()
+
+        Me.BtnExaminar.Enabled = False
 
     End Sub
 
@@ -1081,17 +1451,19 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.Clear()
         Me.CboDptoSucur1.SelectedIndex = -1
         'OFICINA 2
-        Me.TxtDireSucur2.Clear()
-        Me.TxtTelSucur2.Clear()
-        Me.CboCiuSucur2.SelectedIndex = -1
-        Me.TxtCorreoSucur2.Clear()
-        Me.CboDptoSucur2.SelectedIndex = -1
+        Me.TxtNombreConta.Clear()
+        Me.TxtTelConta.Clear()
+        Me.TxtCedulaConta.Clear()
+        Me.TxtCorreoConta.Clear()
+        Me.TxtTarjetaP.Clear()
         'DATOS DEL REPRESENTANTE
         Me.Txtrepre.Clear()
         Me.Txtcedrepre.Clear()
         Me.Txtdirerepre.Clear()
         Me.Txttelrepre.Clear()
         Me.Txtcorreorepre.Clear()
+        'DATOS DEL LOGO
+        Me.PictureLogo.Image = Nothing
 
     End Sub
 
@@ -1108,8 +1480,8 @@ Public Class FrmEmpresa
         Me.TxtCorreoSucur1.CharacterCasing = CharacterCasing.Lower
     End Sub
 
-    Private Sub TxtCorreoSucur2_TextChanged(sender As Object, e As EventArgs) Handles TxtCorreoSucur2.TextChanged
-        Me.TxtCorreoSucur2.CharacterCasing = CharacterCasing.Lower
+    Private Sub TxtCorreoSucur2_TextChanged(sender As Object, e As EventArgs) Handles TxtCorreoConta.TextChanged
+        Me.TxtCorreoConta.CharacterCasing = CharacterCasing.Lower
     End Sub
 
     Private Sub Txtcorreorepre_TextChanged(sender As Object, e As EventArgs) Handles Txtcorreorepre.TextChanged
@@ -1120,6 +1492,43 @@ Public Class FrmEmpresa
         Me.Txtrepre.Text = UCase(Me.Txtrepre.Text)
         Me.Txtrepre.SelectionStart = Me.Txtrepre.TextLength + 1
     End Sub
+
+    Private Sub BtnExaminar_Click(sender As Object, e As EventArgs) Handles BtnExaminar.Click
+        Using ofd As New OpenFileDialog()
+            ofd.Title = "Seleccione el logo de la empresa"
+            ofd.Filter = "Imágenes|*.jpg;*.jpeg;*.png"
+            ofd.Multiselect = False
+            If ofd.ShowDialog() = DialogResult.OK Then
+                Using imgTemp As Image = Image.FromFile(ofd.FileName)
+                    PictureLogo.Image = New Bitmap(imgTemp)
+                End Using
+                PictureLogo.SizeMode = PictureBoxSizeMode.Zoom
+            End If
+        End Using
+    End Sub
+
+    'Convertir el PictureBox a bytes
+    Private Function ImagenABytes(ByVal imagen As Image) As Byte()
+        If imagen Is Nothing Then
+            Return Nothing
+        End If
+        Using ms As New MemoryStream()
+            imagen.Save(ms, Imaging.ImageFormat.Png)
+            Return ms.ToArray()
+        End Using
+    End Function
+
+    'RECUPERA EL LOGO
+    Private Function BytesAImagen(ByVal datos As Byte()) As Image
+        If datos Is Nothing OrElse datos.Length = 0 Then
+            Return Nothing
+        End If
+        Using ms As New MemoryStream(datos)
+            Using img As Image = Image.FromStream(ms)
+                Return New Bitmap(img)
+            End Using
+        End Using
+    End Function
 
 
 #End Region

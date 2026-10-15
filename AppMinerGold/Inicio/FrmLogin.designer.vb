@@ -201,10 +201,10 @@ Partial Class FrmLogin
         Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LinkLabel2.Location = New System.Drawing.Point(189, 10)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(232, 16)
+        Me.LinkLabel2.Size = New System.Drawing.Size(203, 16)
         Me.LinkLabel2.TabIndex = 1
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "jucef21@gmail.com - Rev-0.1-2026-Sil"
+        Me.LinkLabel2.Text = "jucef21@gmail.com - Rev-9-2026"
         '
         'Panel1
         '

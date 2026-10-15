@@ -73,20 +73,21 @@ Partial Class FrmEmpresa
         Me.BtnActDatosEmp = New System.Windows.Forms.Button()
         Me.BtnX = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TxtNomFoto = New System.Windows.Forms.TextBox()
+        Me.BtnExaminar = New System.Windows.Forms.Button()
+        Me.PictureLogo = New System.Windows.Forms.PictureBox()
         Me.TxtId = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.CboDptoSucur2 = New System.Windows.Forms.ComboBox()
-        Me.CboCiuSucur2 = New System.Windows.Forms.ComboBox()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.TxtTelSucur2 = New System.Windows.Forms.TextBox()
+        Me.TxtTelConta = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.TxtDireSucur2 = New System.Windows.Forms.TextBox()
+        Me.TxtNombreConta = New System.Windows.Forms.TextBox()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.TxtCorreoSucur2 = New System.Windows.Forms.TextBox()
+        Me.TxtCorreoConta = New System.Windows.Forms.TextBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -101,8 +102,11 @@ Partial Class FrmEmpresa
         Me.Label25 = New System.Windows.Forms.Label()
         Me.TxtCorreoSucur1 = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TxtCedulaConta = New System.Windows.Forms.TextBox()
+        Me.TxtTarjetaP = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -398,7 +402,7 @@ Partial Class FrmEmpresa
         '
         'Txttelrepre
         '
-        Me.Txttelrepre.Location = New System.Drawing.Point(742, 35)
+        Me.Txttelrepre.Location = New System.Drawing.Point(617, 35)
         Me.Txttelrepre.Name = "Txttelrepre"
         Me.Txttelrepre.Size = New System.Drawing.Size(100, 20)
         Me.Txttelrepre.TabIndex = 25
@@ -407,12 +411,12 @@ Partial Class FrmEmpresa
         '
         Me.Txtdirerepre.Location = New System.Drawing.Point(150, 35)
         Me.Txtdirerepre.Name = "Txtdirerepre"
-        Me.Txtdirerepre.Size = New System.Drawing.Size(401, 20)
+        Me.Txtdirerepre.Size = New System.Drawing.Size(318, 20)
         Me.Txtdirerepre.TabIndex = 24
         '
         'Txtcedrepre
         '
-        Me.Txtcedrepre.Location = New System.Drawing.Point(742, 8)
+        Me.Txtcedrepre.Location = New System.Drawing.Point(617, 8)
         Me.Txtcedrepre.Name = "Txtcedrepre"
         Me.Txtcedrepre.Size = New System.Drawing.Size(100, 20)
         Me.Txtcedrepre.TabIndex = 23
@@ -421,7 +425,7 @@ Partial Class FrmEmpresa
         '
         Me.Txtrepre.Location = New System.Drawing.Point(126, 8)
         Me.Txtrepre.Name = "Txtrepre"
-        Me.Txtrepre.Size = New System.Drawing.Size(453, 20)
+        Me.Txtrepre.Size = New System.Drawing.Size(342, 20)
         Me.Txtrepre.TabIndex = 22
         '
         'Label15
@@ -436,7 +440,7 @@ Partial Class FrmEmpresa
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(608, 38)
+        Me.Label14.Location = New System.Drawing.Point(483, 38)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(128, 13)
         Me.Label14.TabIndex = 12
@@ -454,7 +458,7 @@ Partial Class FrmEmpresa
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(600, 11)
+        Me.Label12.Location = New System.Drawing.Point(475, 11)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(136, 13)
         Me.Label12.TabIndex = 10
@@ -598,6 +602,9 @@ Partial Class FrmEmpresa
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TxtNomFoto)
+        Me.Panel2.Controls.Add(Me.BtnExaminar)
+        Me.Panel2.Controls.Add(Me.PictureLogo)
         Me.Panel2.Controls.Add(Me.TxtId)
         Me.Panel2.Controls.Add(Me.Label38)
         Me.Panel2.Controls.Add(Me.Label32)
@@ -610,6 +617,37 @@ Partial Class FrmEmpresa
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(915, 623)
         Me.Panel2.TabIndex = 52
+        '
+        'TxtNomFoto
+        '
+        Me.TxtNomFoto.Enabled = False
+        Me.TxtNomFoto.Location = New System.Drawing.Point(571, 543)
+        Me.TxtNomFoto.Name = "TxtNomFoto"
+        Me.TxtNomFoto.Size = New System.Drawing.Size(182, 20)
+        Me.TxtNomFoto.TabIndex = 61
+        Me.TxtNomFoto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TxtNomFoto.Visible = False
+        '
+        'BtnExaminar
+        '
+        Me.BtnExaminar.Image = CType(resources.GetObject("BtnExaminar.Image"), System.Drawing.Image)
+        Me.BtnExaminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnExaminar.Location = New System.Drawing.Point(787, 543)
+        Me.BtnExaminar.Name = "BtnExaminar"
+        Me.BtnExaminar.Size = New System.Drawing.Size(103, 45)
+        Me.BtnExaminar.TabIndex = 49
+        Me.BtnExaminar.Text = "   Examinar"
+        Me.BtnExaminar.UseVisualStyleBackColor = True
+        '
+        'PictureLogo
+        '
+        Me.PictureLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureLogo.Location = New System.Drawing.Point(787, 443)
+        Me.PictureLogo.Name = "PictureLogo"
+        Me.PictureLogo.Size = New System.Drawing.Size(103, 94)
+        Me.PictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureLogo.TabIndex = 0
+        Me.PictureLogo.TabStop = False
         '
         'TxtId
         '
@@ -635,23 +673,23 @@ Partial Class FrmEmpresa
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.Location = New System.Drawing.Point(351, 328)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(169, 17)
+        Me.Label32.Size = New System.Drawing.Size(210, 17)
         Me.Label32.TabIndex = 46
-        Me.Label32.Text = "OFICINA SUCURSAL 2"
+        Me.Label32.Text = "DATOS DEL CONTADOR(A)"
         '
         'Panel5
         '
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.TxtTarjetaP)
+        Me.Panel5.Controls.Add(Me.TxtCedulaConta)
         Me.Panel5.Controls.Add(Me.Label33)
-        Me.Panel5.Controls.Add(Me.CboDptoSucur2)
-        Me.Panel5.Controls.Add(Me.CboCiuSucur2)
         Me.Panel5.Controls.Add(Me.Label34)
-        Me.Panel5.Controls.Add(Me.TxtTelSucur2)
+        Me.Panel5.Controls.Add(Me.TxtTelConta)
         Me.Panel5.Controls.Add(Me.Label35)
         Me.Panel5.Controls.Add(Me.Label36)
-        Me.Panel5.Controls.Add(Me.TxtDireSucur2)
+        Me.Panel5.Controls.Add(Me.TxtNombreConta)
         Me.Panel5.Controls.Add(Me.Label37)
-        Me.Panel5.Controls.Add(Me.TxtCorreoSucur2)
+        Me.Panel5.Controls.Add(Me.TxtCorreoConta)
         Me.Panel5.Location = New System.Drawing.Point(24, 353)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(866, 63)
@@ -666,78 +704,62 @@ Partial Class FrmEmpresa
         Me.Label33.TabIndex = 34
         Me.Label33.Text = "Correo :"
         '
-        'CboDptoSucur2
-        '
-        Me.CboDptoSucur2.FormattingEnabled = True
-        Me.CboDptoSucur2.Location = New System.Drawing.Point(502, 29)
-        Me.CboDptoSucur2.Name = "CboDptoSucur2"
-        Me.CboDptoSucur2.Size = New System.Drawing.Size(204, 21)
-        Me.CboDptoSucur2.TabIndex = 21
-        '
-        'CboCiuSucur2
-        '
-        Me.CboCiuSucur2.FormattingEnabled = True
-        Me.CboCiuSucur2.Location = New System.Drawing.Point(650, 5)
-        Me.CboCiuSucur2.Name = "CboCiuSucur2"
-        Me.CboCiuSucur2.Size = New System.Drawing.Size(209, 21)
-        Me.CboCiuSucur2.TabIndex = 19
-        '
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(412, 7)
+        Me.Label34.Location = New System.Drawing.Point(414, 32)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(52, 13)
         Me.Label34.TabIndex = 28
         Me.Label34.Text = "Teléfono:"
         '
-        'TxtTelSucur2
+        'TxtTelConta
         '
-        Me.TxtTelSucur2.Location = New System.Drawing.Point(476, 4)
-        Me.TxtTelSucur2.Name = "TxtTelSucur2"
-        Me.TxtTelSucur2.Size = New System.Drawing.Size(101, 20)
-        Me.TxtTelSucur2.TabIndex = 18
+        Me.TxtTelConta.Location = New System.Drawing.Point(478, 29)
+        Me.TxtTelConta.Name = "TxtTelConta"
+        Me.TxtTelConta.Size = New System.Drawing.Size(101, 20)
+        Me.TxtTelConta.TabIndex = 18
         '
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(414, 32)
+        Me.Label35.Location = New System.Drawing.Point(631, 7)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(74, 13)
+        Me.Label35.Size = New System.Drawing.Size(95, 13)
         Me.Label35.TabIndex = 30
-        Me.Label35.Text = "Departamento"
+        Me.Label35.Text = "Tarjeta Profesional"
         '
         'Label36
         '
         Me.Label36.AutoSize = True
         Me.Label36.Location = New System.Drawing.Point(12, 7)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(55, 13)
+        Me.Label36.Size = New System.Drawing.Size(47, 13)
         Me.Label36.TabIndex = 26
-        Me.Label36.Text = "Dirección:"
+        Me.Label36.Text = "Nombre:"
         '
-        'TxtDireSucur2
+        'TxtNombreConta
         '
-        Me.TxtDireSucur2.Location = New System.Drawing.Point(100, 5)
-        Me.TxtDireSucur2.Name = "TxtDireSucur2"
-        Me.TxtDireSucur2.Size = New System.Drawing.Size(305, 20)
-        Me.TxtDireSucur2.TabIndex = 17
+        Me.TxtNombreConta.Location = New System.Drawing.Point(100, 5)
+        Me.TxtNombreConta.Name = "TxtNombreConta"
+        Me.TxtNombreConta.Size = New System.Drawing.Size(305, 20)
+        Me.TxtNombreConta.TabIndex = 17
         '
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(587, 8)
+        Me.Label37.Location = New System.Drawing.Point(412, 8)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(43, 13)
+        Me.Label37.Size = New System.Drawing.Size(58, 13)
         Me.Label37.TabIndex = 24
-        Me.Label37.Text = "Ciudad:"
+        Me.Label37.Text = "Cédula N°:"
         '
-        'TxtCorreoSucur2
+        'TxtCorreoConta
         '
-        Me.TxtCorreoSucur2.Location = New System.Drawing.Point(101, 29)
-        Me.TxtCorreoSucur2.Name = "TxtCorreoSucur2"
-        Me.TxtCorreoSucur2.Size = New System.Drawing.Size(304, 20)
-        Me.TxtCorreoSucur2.TabIndex = 20
+        Me.TxtCorreoConta.Location = New System.Drawing.Point(101, 29)
+        Me.TxtCorreoConta.Name = "TxtCorreoConta"
+        Me.TxtCorreoConta.Size = New System.Drawing.Size(304, 20)
+        Me.TxtCorreoConta.TabIndex = 20
         '
         'Label31
         '
@@ -874,8 +896,22 @@ Partial Class FrmEmpresa
         Me.Panel3.Controls.Add(Me.Txtcorreorepre)
         Me.Panel3.Location = New System.Drawing.Point(24, 443)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(866, 94)
+        Me.Panel3.Size = New System.Drawing.Size(729, 94)
         Me.Panel3.TabIndex = 23
+        '
+        'TxtCedulaConta
+        '
+        Me.TxtCedulaConta.Location = New System.Drawing.Point(477, 4)
+        Me.TxtCedulaConta.Name = "TxtCedulaConta"
+        Me.TxtCedulaConta.Size = New System.Drawing.Size(148, 20)
+        Me.TxtCedulaConta.TabIndex = 35
+        '
+        'TxtTarjetaP
+        '
+        Me.TxtTarjetaP.Location = New System.Drawing.Point(736, 4)
+        Me.TxtTarjetaP.Name = "TxtTarjetaP"
+        Me.TxtTarjetaP.Size = New System.Drawing.Size(101, 20)
+        Me.TxtTarjetaP.TabIndex = 36
         '
         'FrmEmpresa
         '
@@ -909,6 +945,7 @@ Partial Class FrmEmpresa
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -986,15 +1023,18 @@ Partial Class FrmEmpresa
     Friend WithEvents Label32 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label33 As Label
-    Friend WithEvents CboDptoSucur2 As ComboBox
-    Friend WithEvents CboCiuSucur2 As ComboBox
     Friend WithEvents Label34 As Label
-    Friend WithEvents TxtTelSucur2 As TextBox
+    Friend WithEvents TxtTelConta As TextBox
     Friend WithEvents Label35 As Label
     Friend WithEvents Label36 As Label
-    Friend WithEvents TxtDireSucur2 As TextBox
+    Friend WithEvents TxtNombreConta As TextBox
     Friend WithEvents Label37 As Label
-    Friend WithEvents TxtCorreoSucur2 As TextBox
+    Friend WithEvents TxtCorreoConta As TextBox
     Friend WithEvents Label38 As Label
     Friend WithEvents TxtId As TextBox
+    Friend WithEvents PictureLogo As PictureBox
+    Friend WithEvents BtnExaminar As Button
+    Friend WithEvents TxtNomFoto As TextBox
+    Friend WithEvents TxtCedulaConta As TextBox
+    Friend WithEvents TxtTarjetaP As TextBox
 End Class

@@ -101,4 +101,10 @@
         Me.Cursor = Cursors.Default
     End Sub
 
+    Private Sub BtnConta_Click(sender As Object, e As EventArgs) Handles BtnConta.Click
+        Me.Cursor = Cursors.WaitCursor
+        FrmSelectReport.ShowDialog()
+        Me.Cursor = Cursors.Default
+    End Sub
+
 End Class

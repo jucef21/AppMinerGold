@@ -597,6 +597,24 @@ Public Class FrmModiCompras
             End If
             drd.Close()
             Conectar.conn.Close()
+        ElseIf Me.TxtEmpCiu.Text = "BUENAVENTURA" Then
+            Dim dt As New DataTable
+            'revisamos la conexin a la base de datos
+            If Global.AppMinerGold.Conectar.conn.State() = Global.System.Data.ConnectionState.Closed Then
+                Conectar.conn.Close()
+            End If
+            Dim consulta As String = "SELECT prefijo FROM Facturacion WHERE Ciudad= '" & TxtEmpCiu.Text & "' "
+            Dim cmd As New OleDbCommand(consulta, Conectar.conn)
+            Dim drd As OleDbDataReader
+            Conectar.conn.Open()
+            drd = cmd.ExecuteReader
+            If drd.Read Then
+                Me.TextPrefijo.Text = drd.Item("prefijo").ToString
+            Else
+                MsgBox("No se encontro Prefijo de Facturación", MsgBoxStyle.Information, "AppMinerGold")
+            End If
+            drd.Close()
+            Conectar.conn.Close()
         ElseIf Me.TxtEmpCiu.Text = "ARMENIA" Then
             Dim dt As New DataTable
             'revisamos la conexin a la base de datos

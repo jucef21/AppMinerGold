@@ -43,6 +43,7 @@ Public Class FrmSeleEquivaReim
                 MessageBox.Show("El Campo de Consulta no se digito un Número...! ", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 'Ubico el cursor
                 'limpio y ubico el cursor
+                Me.Panel2.Enabled = True
                 Me.TxtDocIngreso.Text = ""
                 Me.TxtDocIngreso.Select()
                 Me.TxtDocIngreso.Focus()
@@ -54,11 +55,13 @@ Public Class FrmSeleEquivaReim
                 If FiltroDeclara(Me.TxtDocIngreso.Text).Rows.Count > 0 Then
                     DGVreimpEqui.DataSource = FiltroDeclara(Me.TxtDocIngreso.Text)
                     MessageBox.Show("Busqueda Encontrada, Aceptar para Imprimir", "AppMinerGold", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                     'Envio el numero de docuemnto buscado al reporte
                     FrmNuevoReimpEqui.TxtConsecutivo.Text = TxtDocIngreso.Text
                     FrmNuevoReimpEqui.TxtVerCiudImp.Text = Me.TxtEmpCiu.Text
                     'llamo  el form
                     FrmNuevoReimpEqui.ShowDialog()
+
                     'Inhabilito el boton
                     Me.TxtDocIngreso.Enabled = False
                     Me.DGVreimpEqui.Enabled = False
@@ -90,17 +93,55 @@ Public Class FrmSeleEquivaReim
         Me.Close()
     End Sub
 
-    'FUNCION DE FILTRAR NUMERO DE DOCUMENTO DE INGRESO
     Function FiltroDeclara(ByVal busqueda As String) As DataTable
-        conn.Open()
-        Dim dt As New DataTable
-        Dim ds As New DataSet
-        'Dim da As New OleDbDataAdapter("SELECT TOP 1 * FROM Clientes WHERE nom_cl LIKE '" & busqueda.Trim & "%' ORDER BY id DESC", conn)
-        Dim da As New OleDbDataAdapter("SELECT * FROM Declara WHERE consecutivo LIKE '" & busqueda.Trim & "%' ORDER BY consecutivo ASC", conn)
-        da.Fill(dt)
-        dv.Table = ds.Tables("Declara")
-        DGVreimpEqui.DataSource = dv
-        conn.Close()
+        Dim dt As New DataTable()
+
+        Dim consecutivo As Integer
+
+        'Validar que sea un número
+        If Not Integer.TryParse(busqueda.Trim(), consecutivo) Then
+            MessageBox.Show("Ingrese un número válido.", "AppMinerGold - Registro anulado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return dt
+        End If
+
+        'No permitir buscar registros anulados
+        If consecutivo = 1111111111 Then
+            MessageBox.Show("Este consecutivo corresponde a un registro anulado.",
+                        "AppMinerGold - Registro anulado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            DGVreimpEqui.DataSource = Nothing
+            Return dt
+        End If
+
+        Try
+            If conn.State = ConnectionState.Closed Then
+                conn.Open()
+            End If
+
+            Dim sql As String = "SELECT * FROM Declara " &
+                            "WHERE consecutivo = ? " &
+                            "AND cedu_com <> 1111111111"
+
+            Using da As New OleDbDataAdapter(sql, conn)
+                da.SelectCommand.Parameters.Add("@consecutivo", OleDbType.Integer).Value = consecutivo
+                da.Fill(dt)
+            End Using
+
+            DGVreimpEqui.DataSource = dt
+
+            If dt.Rows.Count = 0 Then
+                MessageBox.Show("No se encontró ningún registro.",
+                            "AppMinerGold - Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Error al buscar: " & ex.Message,
+                        "AppMinerGold - Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            If conn.State = ConnectionState.Open Then
+                conn.Close()
+            End If
+        End Try
+
         Return dt
     End Function
 

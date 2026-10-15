@@ -28,9 +28,15 @@ Partial Class FrmEscojeImpPlata
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TxtConsecu = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnPagare = New System.Windows.Forms.Button()
+        Me.BtnLiquidacion = New System.Windows.Forms.Button()
+        Me.BtnCertifica = New System.Windows.Forms.Button()
+        Me.BtnActa = New System.Windows.Forms.Button()
+        Me.BtnContrato = New System.Windows.Forms.Button()
+        Me.BtnSoporte = New System.Windows.Forms.Button()
+        Me.BtnDeclara = New System.Windows.Forms.Button()
         Me.BtnEgreso = New System.Windows.Forms.Button()
         Me.BtnEquivalente = New System.Windows.Forms.Button()
-        Me.BtnDeclara = New System.Windows.Forms.Button()
         Me.TxtEmpCiuImp = New System.Windows.Forms.TextBox()
         Me.TxtCedImp = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -80,7 +86,7 @@ Partial Class FrmEscojeImpPlata
         '
         Me.TxtConsecu.Enabled = False
         Me.TxtConsecu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtConsecu.Location = New System.Drawing.Point(319, 360)
+        Me.TxtConsecu.Location = New System.Drawing.Point(319, 321)
         Me.TxtConsecu.Name = "TxtConsecu"
         Me.TxtConsecu.Size = New System.Drawing.Size(101, 23)
         Me.TxtConsecu.TabIndex = 104
@@ -89,55 +95,139 @@ Partial Class FrmEscojeImpPlata
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.BtnEgreso)
-        Me.Panel2.Controls.Add(Me.BtnEquivalente)
+        Me.Panel2.Controls.Add(Me.BtnPagare)
+        Me.Panel2.Controls.Add(Me.BtnLiquidacion)
+        Me.Panel2.Controls.Add(Me.BtnCertifica)
+        Me.Panel2.Controls.Add(Me.BtnActa)
+        Me.Panel2.Controls.Add(Me.BtnContrato)
+        Me.Panel2.Controls.Add(Me.BtnSoporte)
         Me.Panel2.Controls.Add(Me.BtnDeclara)
-        Me.Panel2.Location = New System.Drawing.Point(73, 114)
+        Me.Panel2.Location = New System.Drawing.Point(11, 102)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(275, 207)
+        Me.Panel2.Size = New System.Drawing.Size(409, 212)
         Me.Panel2.TabIndex = 105
         '
-        'BtnEgreso
+        'BtnPagare
         '
-        Me.BtnEgreso.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnEgreso.Image = CType(resources.GetObject("BtnEgreso.Image"), System.Drawing.Image)
-        Me.BtnEgreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEgreso.Location = New System.Drawing.Point(31, 142)
-        Me.BtnEgreso.Name = "BtnEgreso"
-        Me.BtnEgreso.Size = New System.Drawing.Size(217, 44)
-        Me.BtnEgreso.TabIndex = 3
-        Me.BtnEgreso.Text = "3 - Documento Egreso"
-        Me.BtnEgreso.UseVisualStyleBackColor = True
+        Me.BtnPagare.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnPagare.Image = CType(resources.GetObject("BtnPagare.Image"), System.Drawing.Image)
+        Me.BtnPagare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnPagare.Location = New System.Drawing.Point(207, 58)
+        Me.BtnPagare.Name = "BtnPagare"
+        Me.BtnPagare.Size = New System.Drawing.Size(193, 40)
+        Me.BtnPagare.TabIndex = 6
+        Me.BtnPagare.Text = "            6 - Pagare"
+        Me.BtnPagare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnPagare.UseVisualStyleBackColor = True
         '
-        'BtnEquivalente
+        'BtnLiquidacion
         '
-        Me.BtnEquivalente.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnEquivalente.Image = CType(resources.GetObject("BtnEquivalente.Image"), System.Drawing.Image)
-        Me.BtnEquivalente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEquivalente.Location = New System.Drawing.Point(31, 81)
-        Me.BtnEquivalente.Name = "BtnEquivalente"
-        Me.BtnEquivalente.Size = New System.Drawing.Size(217, 44)
-        Me.BtnEquivalente.TabIndex = 2
-        Me.BtnEquivalente.Text = "2 - Documento Equivalente"
-        Me.BtnEquivalente.UseVisualStyleBackColor = True
+        Me.BtnLiquidacion.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnLiquidacion.Image = CType(resources.GetObject("BtnLiquidacion.Image"), System.Drawing.Image)
+        Me.BtnLiquidacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnLiquidacion.Location = New System.Drawing.Point(207, 8)
+        Me.BtnLiquidacion.Name = "BtnLiquidacion"
+        Me.BtnLiquidacion.Size = New System.Drawing.Size(193, 40)
+        Me.BtnLiquidacion.TabIndex = 5
+        Me.BtnLiquidacion.Text = "            5 - Acta de Liquidación"
+        Me.BtnLiquidacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnLiquidacion.UseVisualStyleBackColor = True
+        '
+        'BtnCertifica
+        '
+        Me.BtnCertifica.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnCertifica.Image = CType(resources.GetObject("BtnCertifica.Image"), System.Drawing.Image)
+        Me.BtnCertifica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCertifica.Location = New System.Drawing.Point(7, 158)
+        Me.BtnCertifica.Name = "BtnCertifica"
+        Me.BtnCertifica.Size = New System.Drawing.Size(193, 40)
+        Me.BtnCertifica.TabIndex = 4
+        Me.BtnCertifica.Text = "           4 - Certificación Tributaria"
+        Me.BtnCertifica.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnCertifica.UseVisualStyleBackColor = True
+        '
+        'BtnActa
+        '
+        Me.BtnActa.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnActa.Image = CType(resources.GetObject("BtnActa.Image"), System.Drawing.Image)
+        Me.BtnActa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnActa.Location = New System.Drawing.Point(7, 108)
+        Me.BtnActa.Name = "BtnActa"
+        Me.BtnActa.Size = New System.Drawing.Size(193, 40)
+        Me.BtnActa.TabIndex = 3
+        Me.BtnActa.Text = "           3 - Acta de Entrega"
+        Me.BtnActa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnActa.UseVisualStyleBackColor = True
+        '
+        'BtnContrato
+        '
+        Me.BtnContrato.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnContrato.Image = CType(resources.GetObject("BtnContrato.Image"), System.Drawing.Image)
+        Me.BtnContrato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnContrato.Location = New System.Drawing.Point(7, 58)
+        Me.BtnContrato.Name = "BtnContrato"
+        Me.BtnContrato.Size = New System.Drawing.Size(193, 40)
+        Me.BtnContrato.TabIndex = 2
+        Me.BtnContrato.Text = "           2 - Contrato"
+        Me.BtnContrato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnContrato.UseVisualStyleBackColor = True
+        '
+        'BtnSoporte
+        '
+        Me.BtnSoporte.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSoporte.Image = CType(resources.GetObject("BtnSoporte.Image"), System.Drawing.Image)
+        Me.BtnSoporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSoporte.Location = New System.Drawing.Point(207, 108)
+        Me.BtnSoporte.Name = "BtnSoporte"
+        Me.BtnSoporte.Size = New System.Drawing.Size(193, 40)
+        Me.BtnSoporte.TabIndex = 7
+        Me.BtnSoporte.Text = "             7 - Todos los Reportes"
+        Me.BtnSoporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSoporte.UseVisualStyleBackColor = True
         '
         'BtnDeclara
         '
         Me.BtnDeclara.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnDeclara.Image = CType(resources.GetObject("BtnDeclara.Image"), System.Drawing.Image)
         Me.BtnDeclara.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDeclara.Location = New System.Drawing.Point(31, 20)
+        Me.BtnDeclara.Location = New System.Drawing.Point(3, 9)
         Me.BtnDeclara.Name = "BtnDeclara"
-        Me.BtnDeclara.Size = New System.Drawing.Size(217, 44)
+        Me.BtnDeclara.Size = New System.Drawing.Size(193, 40)
         Me.BtnDeclara.TabIndex = 1
-        Me.BtnDeclara.Text = "1 - Declaración de Producción"
+        Me.BtnDeclara.Text = "         1 - Declaración de Producción"
         Me.BtnDeclara.UseVisualStyleBackColor = True
+        '
+        'BtnEgreso
+        '
+        Me.BtnEgreso.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEgreso.Image = CType(resources.GetObject("BtnEgreso.Image"), System.Drawing.Image)
+        Me.BtnEgreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEgreso.Location = New System.Drawing.Point(75, 45)
+        Me.BtnEgreso.Name = "BtnEgreso"
+        Me.BtnEgreso.Size = New System.Drawing.Size(63, 44)
+        Me.BtnEgreso.TabIndex = 9
+        Me.BtnEgreso.Text = "3 - Documento Egreso"
+        Me.BtnEgreso.UseVisualStyleBackColor = True
+        Me.BtnEgreso.Visible = False
+        '
+        'BtnEquivalente
+        '
+        Me.BtnEquivalente.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnEquivalente.Image = CType(resources.GetObject("BtnEquivalente.Image"), System.Drawing.Image)
+        Me.BtnEquivalente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEquivalente.Location = New System.Drawing.Point(9, 45)
+        Me.BtnEquivalente.Name = "BtnEquivalente"
+        Me.BtnEquivalente.Size = New System.Drawing.Size(63, 44)
+        Me.BtnEquivalente.TabIndex = 8
+        Me.BtnEquivalente.Text = "2 - Documento Equivalente"
+        Me.BtnEquivalente.UseVisualStyleBackColor = True
+        Me.BtnEquivalente.Visible = False
         '
         'TxtEmpCiuImp
         '
         Me.TxtEmpCiuImp.Enabled = False
         Me.TxtEmpCiuImp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtEmpCiuImp.Location = New System.Drawing.Point(212, 360)
+        Me.TxtEmpCiuImp.Location = New System.Drawing.Point(212, 321)
         Me.TxtEmpCiuImp.Name = "TxtEmpCiuImp"
         Me.TxtEmpCiuImp.Size = New System.Drawing.Size(101, 23)
         Me.TxtEmpCiuImp.TabIndex = 103
@@ -147,7 +237,7 @@ Partial Class FrmEscojeImpPlata
         '
         Me.TxtCedImp.Enabled = False
         Me.TxtCedImp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCedImp.Location = New System.Drawing.Point(9, 360)
+        Me.TxtCedImp.Location = New System.Drawing.Point(9, 321)
         Me.TxtCedImp.Name = "TxtCedImp"
         Me.TxtCedImp.Size = New System.Drawing.Size(101, 23)
         Me.TxtCedImp.TabIndex = 102
@@ -157,20 +247,22 @@ Partial Class FrmEscojeImpPlata
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.BtnEgreso)
         Me.Panel3.Controls.Add(Me.PictureBox1)
+        Me.Panel3.Controls.Add(Me.BtnEquivalente)
         Me.Panel3.Controls.Add(Me.TxtConsecu)
         Me.Panel3.Controls.Add(Me.Panel2)
         Me.Panel3.Controls.Add(Me.TxtEmpCiuImp)
         Me.Panel3.Controls.Add(Me.TxtCedImp)
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(433, 396)
+        Me.Panel3.Size = New System.Drawing.Size(433, 354)
         Me.Panel3.TabIndex = 108
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(181, 52)
+        Me.PictureBox1.Location = New System.Drawing.Point(187, 47)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(50, 42)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -182,14 +274,14 @@ Partial Class FrmEscojeImpPlata
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(433, 396)
+        Me.ClientSize = New System.Drawing.Size(433, 354)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(433, 396)
+        Me.MaximumSize = New System.Drawing.Size(433, 354)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(433, 396)
+        Me.MinimumSize = New System.Drawing.Size(433, 354)
         Me.Name = "FrmEscojeImpPlata"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmEscojeImpPlata"
@@ -215,4 +307,10 @@ Partial Class FrmEscojeImpPlata
     Friend WithEvents TxtCedImp As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BtnPagare As Button
+    Friend WithEvents BtnLiquidacion As Button
+    Friend WithEvents BtnCertifica As Button
+    Friend WithEvents BtnActa As Button
+    Friend WithEvents BtnContrato As Button
+    Friend WithEvents BtnSoporte As Button
 End Class

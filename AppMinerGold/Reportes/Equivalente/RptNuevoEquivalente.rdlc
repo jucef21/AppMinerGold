@@ -2066,6 +2066,7 @@
                       </Style>
                     </Textbox>
                     <ColSpan>3</ColSpan>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell />
@@ -2321,7 +2322,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox44</rd:DefaultName>
         <Top>3.52232cm</Top>
-        <Left>10.05862cm</Left>
+        <Left>10.09389cm</Left>
         <Height>0.63885cm</Height>
         <Width>3.25438cm</Width>
         <ZIndex>5</ZIndex>
